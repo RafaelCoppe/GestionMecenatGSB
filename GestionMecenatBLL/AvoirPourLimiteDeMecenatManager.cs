@@ -34,5 +34,10 @@ namespace GestionMecenatBLL
             AvoirPourLimiteDeMecenat uneLimiteMecenat = new AvoirPourLimiteDeMecenat(SommeMaximum, unPays, uneAnnee);
             return AvoirPourLimiteDeMecenatDAO.GetInstance().AjoutLimiteDeMecenat(uneLimiteMecenat);
         }
+
+        public List<AvoirPourLimiteDeMecenat> GetLimiteDeMecenat()
+        {
+            return AvoirPourLimiteDeMecenatDAO.GetInstance().GetLimiteDeMecenat();
+        }
     }
 }

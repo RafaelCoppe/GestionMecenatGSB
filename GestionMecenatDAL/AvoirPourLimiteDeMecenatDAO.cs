@@ -60,5 +60,40 @@ namespace GestionMecenatDAL
             return nbEnregAjout;
         }
 
+        public List<AvoirPourLimiteDeMecenat> GetLimiteDeMecenat()
+        {
+            SqlCommand maCommand = Commande.GetObjCommande();
+            int plafondMecenat;
+            Pays lePays;
+            Annee uneAnnee;
+
+            // on crée la collection lesClients de type List<Client> qui va contenir les
+            // caractéristiques des clients enregistrés dans la base de donnes
+            List<AvoirPourLimiteDeMecenat> lesLimitesDeMecenat;
+            lesLimitesDeMecenat = new List<AvoirPourLimiteDeMecenat>();
+
+            // on exécute la requête et on récupère dans un DataReader les enregistrements
+            maCommand.CommandText = "GetLesLimitesDeMecenat";
+
+            SqlDataReader monLecteur = maCommand.ExecuteReader();
+
+            // pour chaque enregistrement du DataReader on crée un objet instance de
+            // Client que l'on ajoute dans la collection lesClients
+
+            while (monLecteur.Read())
+            {
+                plafondMecenat = (int)monLecteur["plafondMecenat"];
+                lePays = new Pays(((int)monLecteur["IdPAys"]), (monLecteur["libellePays"].ToString()));
+                uneAnnee = new Annee(((int)monLecteur["idAnnee"]));
+
+                lesLimitesDeMecenat.Add(new AvoirPourLimiteDeMecenat(plafondMecenat, lePays, uneAnnee ));
+            }
+
+            monLecteur.Close();
+
+            maCommand.Connection.Close();
+
+            return lesLimitesDeMecenat;
+        }
     }
 }
