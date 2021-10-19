@@ -87,6 +87,9 @@
     <EmbeddedResource Include="FormAjoutPartenariat.resx">
       <DependentUpon>FormAjoutPartenariat.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultPartenariat.resx">
+      <DependentUpon>FormConsultPartenariat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </EmbeddedResource>
