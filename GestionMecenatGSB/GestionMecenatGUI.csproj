@@ -64,6 +64,12 @@
     <Compile Include="FormAjoutPartenariat.Designer.cs">
       <DependentUpon>FormAjoutPartenariat.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormConsultPartenariat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsultPartenariat.Designer.cs">
+      <DependentUpon>FormConsultPartenariat.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMenu.cs">
       <SubType>Form</SubType>
     </Compile>
