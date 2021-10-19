@@ -52,10 +52,10 @@ namespace GestionMecenatDAL
                 IDPartenariat = (int)monLecteur["id"];
                 budgetPrevisionnel = float.Parse(monLecteur["budgetPrevisionnel"].ToString());
                 coutPartenariat = float.Parse(monLecteur["coutPartenariat"].ToString());
-                idAction = (int)monLecteur["id_actionMenee"];
-                idAssociation = (int)monLecteur["id_association"];
+                uneActionMenee = new ActionMenee((int)monLecteur["id_actionMenee"]);
+                uneAssociationLiee = new Association((int)monLecteur["id_association"]);
 
-                lesPartenariats.Add(new Partenariat(IDPartenariat, budgetPrevisionnel, coutPartenariat, idAction, idAssociation));
+                lesPartenariats.Add(new Partenariat(IDPartenariat, budgetPrevisionnel, coutPartenariat, uneActionMenee, uneAssociationLiee));
             }
 
             foreach (Partenariat lePartenariat in lesPartenariats)
