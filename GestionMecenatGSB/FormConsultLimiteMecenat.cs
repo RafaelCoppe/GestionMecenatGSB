@@ -20,9 +20,7 @@ namespace GestionMecenatGSB
 
         private void btnObtenirInfos_Click(object sender, EventArgs e)
         {
-            dtgConsultLimiteMecenat = AvoirPourLimiteDeMecenatManager.GetInstance().GetLimiteDeMecenat();
-
-
+            dtgConsultLimiteMecenat.DataSource = AvoirPourLimiteDeMecenatManager.GetInstance().GetLimiteDeMecenat();
         }
     }
 }
