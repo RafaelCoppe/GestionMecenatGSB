@@ -16,11 +16,14 @@ namespace GestionMecenatGSB
         public FormConsultLimiteMecenat()
         {
             InitializeComponent();
+            dtgConsultLimiteMecenat.DataSource = AvoirPourLimiteDeMecenatManager.GetInstance().GetLimiteDeMecenat();
+
+            dtgConsultLimiteMecenat.Columns[1].Visible = false;
+            dtgConsultLimiteMecenat.Columns[2].Visible = false;
+
+            dtgConsultLimiteMecenat.Columns[3].HeaderText = "Année";
+            dtgConsultLimiteMecenat.Columns[4].HeaderText = "Pays";
         }
 
-        private void btnObtenirInfos_Click(object sender, EventArgs e)
-        {
-            dtgConsultLimiteMecenat.DataSource = AvoirPourLimiteDeMecenatManager.GetInstance().GetLimiteDeMecenat();
-        }
     }
 }

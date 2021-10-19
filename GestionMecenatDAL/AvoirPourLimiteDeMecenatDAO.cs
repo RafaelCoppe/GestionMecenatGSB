@@ -83,7 +83,7 @@ namespace GestionMecenatDAL
             while (monLecteur.Read())
             {
                 plafondMecenat = (int)monLecteur["plafondMecenat"];
-                lePays = new Pays(((int)monLecteur["IdPAys"]), (monLecteur["libellePays"].ToString()));
+                lePays = new Pays(((int)monLecteur["idPays"]), (monLecteur["libelle"].ToString()));
                 uneAnnee = new Annee(((int)monLecteur["idAnnee"]));
 
                 lesLimitesDeMecenat.Add(new AvoirPourLimiteDeMecenat(plafondMecenat, lePays, uneAnnee ));
