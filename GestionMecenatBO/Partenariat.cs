@@ -26,9 +26,11 @@ namespace GestionMecenatBO
         private int id;
         private float budgetPrevisionnel;
         private float coutPartenariat;
+        private int idActionMennee;
+        private int idAssociationLiee;
         private ActionMenee actionMennee;
         private Association associationLiee;
-        
+
 
         //Accesseurs en lecture et en écriture
         public int Id { get => id; set => id = value; }
@@ -51,6 +53,16 @@ namespace GestionMecenatBO
 
         //Constructeur sans id
         public Partenariat(float budgetPrevisionnel, float coutPartenariat, ActionMenee actionMennee, Association uneAssociation)
+        {
+            this.budgetPrevisionnel = budgetPrevisionnel;
+            this.coutPartenariat = coutPartenariat;
+
+            this.actionMennee = actionMennee;
+            this.associationLiee = uneAssociation;
+        }
+
+        //Constructeur avec un id à la place des objets ActionMenee et Association
+        public Partenariat(float budgetPrevisionnel, float coutPartenariat, int actionMennee, int uneAssociation)
         {
             this.budgetPrevisionnel = budgetPrevisionnel;
             this.coutPartenariat = coutPartenariat;

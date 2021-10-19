@@ -68,8 +68,8 @@ namespace GestionMecenatGSB
                 float coutPartenariat = float.Parse(txtCoutPartenariat.Text);
 
                 //On crée deux objets ActionMenee et Association
-                ActionMenee choixActionMenee = new ActionMenee((int)cbxActionMenee.SelectedValue, cbxActionMenee.Text);
-                Association choixAssociation = new Association((int)cbxAssoLiee.SelectedValue, cbxAssoLiee.Text);
+                int choixActionMenee = (int)cbxActionMenee.SelectedValue;
+                int choixAssociation = (int)cbxAssoLiee.SelectedValue;
 
                 //Appel de la méthode AjoutPartenariat
                 try

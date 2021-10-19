@@ -31,8 +31,8 @@ namespace GestionMecenatDAL
             int IDPartenariat;
             float budgetPrevisionnel;
             float coutPartenariat;
-            int idAction;
-            int idAssociation;
+            //int idAction;
+            //int idAssociation;
             ActionMenee uneActionMenee;
             Association uneAssociationLiee;
 
@@ -68,7 +68,7 @@ namespace GestionMecenatDAL
             maCommand.Connection.Close();
 
             //On remplace les ID d'action et d'association par leurs noms
-            foreach (Partenariat lePartenariat in lesPartenariats)
+            /*foreach (Partenariat lePartenariat in lesPartenariats)
             {
                 uneActionMenee = ActionMeneeDAO.GetInstance().GetUneActionMenee(lePartenariat.ActionMennee.Id);
                 uneActionMenee = new ActionMenee(uneActionMenee.Id, uneActionMenee.Libelle);
@@ -76,7 +76,7 @@ namespace GestionMecenatDAL
                 uneAssociationLiee = new Association(uneAssociationLiee.Id, uneAssociationLiee.NomAssociation, uneAssociationLiee.NomResponsbale, uneAssociationLiee.LaMission, uneAssociationLiee.LePays);
             
                 lesPartenariats.Add(new Partenariat(lePartenariat.Id, lePartenariat.BudgetPrevisionnel, lePartenariat.CoutPartenariat, uneActionMenee, uneAssociationLiee));
-            }
+            }*/
 
             // on retourne la collection
             return lesPartenariats;
