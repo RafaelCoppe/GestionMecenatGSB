@@ -39,5 +39,11 @@ namespace GestionMecenatGSB
             FormAjoutLimiteMecenat laLimiteMecenatAjout = new FormAjoutLimiteMecenat();
             laLimiteMecenatAjout.Show();
         }
+
+        private void associationsToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            FormConsultAssoc leFormConsultAssoc = new FormConsultAssoc();
+            leFormConsultAssoc.Show();
+        }
     }
 }
