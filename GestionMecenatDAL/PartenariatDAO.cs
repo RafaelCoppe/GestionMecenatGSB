@@ -25,6 +25,59 @@ namespace GestionMecenatDAL
         {
         }
 
+        public List<Partenariat> GetPartenariats()
+        {
+            SqlCommand maCommand = Commande.GetObjCommande();
+            int IDPartenariat;
+            float budgetPrevisionnel;
+            float coutPartenariat;
+            int idAction;
+            int idAssociation;
+            ActionMenee uneActionMenee;
+            Association uneAssociationLiee;
+
+            // on crée la collection lesClients de type List<Client> qui va contenir les
+            // caractéristiques des clients enregistrés dans la base de donnes
+            List<Partenariat> lesPartenariats = new List<Partenariat>();
+
+            // on exécute la requête et on récupère dans un DataReader les enregistrements
+            maCommand.CommandText = "GetLesPartenariats";
+            SqlDataReader monLecteur = maCommand.ExecuteReader();
+
+            // pour chaque enregistrement du DataReader on crée un objet instance de
+            // Client que l'on ajoute dans la collection lesClients
+
+            while (monLecteur.Read())
+            {
+                IDPartenariat = (int)monLecteur["id"];
+                budgetPrevisionnel = float.Parse(monLecteur["budgetPrevisionnel"].ToString());
+                coutPartenariat = float.Parse(monLecteur["coutPartenariat"].ToString());
+                idAction = (int)monLecteur["id_actionMenee"];
+                idAssociation = (int)monLecteur["id_association"];
+
+                lesPartenariats.Add(new Partenariat(IDPartenariat, budgetPrevisionnel, coutPartenariat, idAction, idAssociation));
+            }
+
+            foreach (Partenariat lePartenariat in lesPartenariats)
+            {
+                uneActionMenee = ActionMeneeDAO.GetInstance().GetUneActionMenee(lePartenariat.ActionMennee.Id);
+                uneActionMenee = new ActionMenee(uneActionMenee.Id, uneActionMenee.Libelle);
+                uneAssociationLiee = AssociationDAO.GetInstance().GetUneAssociation(lePartenariat.AssociationLiee.Id);
+                uneAssociationLiee = new Association(uneAssociationLiee.Id, uneAssociationLiee.NomAssociation, uneAssociationLiee.NomResponsbale, uneAssociationLiee.LaMission, uneAssociationLiee.LePays);
+            }
+            
+            // on ferme le DataReader
+
+            monLecteur.Close();
+
+            // on ferme la connexion
+
+            maCommand.Connection.Close();
+
+            // on retourne la collection
+            return lesPartenariats;
+        }
+
         public int AjoutPartenariat(Partenariat unPartenariat) //Méthode qui ajoute un partenariat dans la table
         {
             int nbEnregAjout;
