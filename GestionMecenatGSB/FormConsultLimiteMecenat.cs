@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GestionMecenatBLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace GestionMecenatGSB
         public FormConsultLimiteMecenat()
         {
             InitializeComponent();
+        }
+
+        private void btnObtenirInfos_Click(object sender, EventArgs e)
+        {
+            dtgConsultLimiteMecenat = AvoirPourLimiteDeMecenatManager.GetInstance().GetLimiteDeMecenat();
+
+
         }
     }
 }
