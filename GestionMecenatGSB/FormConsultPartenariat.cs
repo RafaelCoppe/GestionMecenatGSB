@@ -16,5 +16,10 @@ namespace GestionMecenatGSB
         {
             InitializeComponent();
         }
+
+        private void btnAfficherPartenariats_Click(object sender, EventArgs e)
+        {
+            dtgAfficherPartenariats.DataSource = PartenariatManager.GetInstance().GetLesPartenariats();
+        }
     }
 }
