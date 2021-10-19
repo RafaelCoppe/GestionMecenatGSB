@@ -67,8 +67,8 @@ namespace GestionMecenatBO
             this.budgetPrevisionnel = budgetPrevisionnel;
             this.coutPartenariat = coutPartenariat;
 
-            this.actionMennee = actionMennee;
-            this.associationLiee = uneAssociation;
+            this.idActionMennee = actionMennee;
+            this.idAssociationLiee = uneAssociation;
         }
     }
 }
