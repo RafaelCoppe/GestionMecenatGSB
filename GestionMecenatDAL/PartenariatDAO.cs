@@ -38,6 +38,7 @@ namespace GestionMecenatDAL
 
             // on crée la collection lesClients de type List<Client> qui va contenir les
             // caractéristiques des clients enregistrés dans la base de donnes
+            List<Partenariat> lesPartenariatsID = new List<Partenariat>();
             List<Partenariat> lesPartenariats = new List<Partenariat>();
 
             // on exécute la requête et on récupère dans un DataReader les enregistrements
@@ -55,15 +56,7 @@ namespace GestionMecenatDAL
                 uneActionMenee = new ActionMenee((int)monLecteur["id_actionMenee"]);
                 uneAssociationLiee = new Association((int)monLecteur["id_association"]);
 
-                lesPartenariats.Add(new Partenariat(IDPartenariat, budgetPrevisionnel, coutPartenariat, uneActionMenee, uneAssociationLiee));
-            }
-
-            foreach (Partenariat lePartenariat in lesPartenariats)
-            {
-                uneActionMenee = ActionMeneeDAO.GetInstance().GetUneActionMenee(lePartenariat.ActionMennee.Id);
-                uneActionMenee = new ActionMenee(uneActionMenee.Id, uneActionMenee.Libelle);
-                uneAssociationLiee = AssociationDAO.GetInstance().GetUneAssociation(lePartenariat.AssociationLiee.Id);
-                uneAssociationLiee = new Association(uneAssociationLiee.Id, uneAssociationLiee.NomAssociation, uneAssociationLiee.NomResponsbale, uneAssociationLiee.LaMission, uneAssociationLiee.LePays);
+                lesPartenariatsID.Add(new Partenariat(IDPartenariat, budgetPrevisionnel, coutPartenariat, uneActionMenee, uneAssociationLiee));
             }
             
             // on ferme le DataReader
@@ -73,6 +66,17 @@ namespace GestionMecenatDAL
             // on ferme la connexion
 
             maCommand.Connection.Close();
+
+            //On remplace les ID d'action et d'association par leurs noms
+            foreach (Partenariat lePartenariat in lesPartenariats)
+            {
+                uneActionMenee = ActionMeneeDAO.GetInstance().GetUneActionMenee(lePartenariat.ActionMennee.Id);
+                uneActionMenee = new ActionMenee(uneActionMenee.Id, uneActionMenee.Libelle);
+                uneAssociationLiee = AssociationDAO.GetInstance().GetUneAssociation(lePartenariat.AssociationLiee.Id);
+                uneAssociationLiee = new Association(uneAssociationLiee.Id, uneAssociationLiee.NomAssociation, uneAssociationLiee.NomResponsbale, uneAssociationLiee.LaMission, uneAssociationLiee.LePays);
+            
+                lesPartenariats.Add(new Partenariat(lePartenariat.Id, lePartenariat.BudgetPrevisionnel, lePartenariat.CoutPartenariat, uneActionMenee, uneAssociationLiee));
+            }
 
             // on retourne la collection
             return lesPartenariats;
