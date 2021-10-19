@@ -78,27 +78,27 @@ namespace GestionMecenatGSB
             // associationsToolStripMenuItem
             // 
             this.associationsToolStripMenuItem.Name = "associationsToolStripMenuItem";
-            this.associationsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.associationsToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.associationsToolStripMenuItem.Text = "Associations";
             this.associationsToolStripMenuItem.Click += new System.EventHandler(this.associationsToolStripMenuItem_Click);
             // 
             // actionsToolStripMenuItem
             // 
             this.actionsToolStripMenuItem.Name = "actionsToolStripMenuItem";
-            this.actionsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.actionsToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.actionsToolStripMenuItem.Text = "Actions";
             // 
             // partenariatsToolStripMenuItem
             // 
             this.partenariatsToolStripMenuItem.Name = "partenariatsToolStripMenuItem";
-            this.partenariatsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.partenariatsToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.partenariatsToolStripMenuItem.Text = "Partenariats";
             this.partenariatsToolStripMenuItem.Click += new System.EventHandler(this.partenariatsToolStripMenuItem_Click);
             // 
             // limitesDeMécénatToolStripMenuItem
             // 
             this.limitesDeMécénatToolStripMenuItem.Name = "limitesDeMécénatToolStripMenuItem";
-            this.limitesDeMécénatToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.limitesDeMécénatToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.limitesDeMécénatToolStripMenuItem.Text = "Limites de mécénat";
             this.limitesDeMécénatToolStripMenuItem.Click += new System.EventHandler(this.limitesDeMécénatToolStripMenuItem_Click);
             // 
@@ -193,6 +193,7 @@ namespace GestionMecenatGSB
             this.limiteDeMécénatToolStripMenuItem.Name = "limiteDeMécénatToolStripMenuItem";
             this.limiteDeMécénatToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.limiteDeMécénatToolStripMenuItem.Text = "Limites de mécénat";
+            this.limiteDeMécénatToolStripMenuItem.Click += new System.EventHandler(this.limiteDeMécénatToolStripMenuItem_Click);
             // 
             // FormMenu
             // 
