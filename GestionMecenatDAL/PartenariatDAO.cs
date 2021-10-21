@@ -53,7 +53,7 @@ namespace GestionMecenatDAL
                 budgetPrevisionnel = decimal.Parse(monLecteur["budgetPrevisionnel"].ToString());
                 coutPartenariat = decimal.Parse(monLecteur["coutPartenariat"].ToString());
                 uneActionMenee = new ActionMenee((int)monLecteur["id_actionMenee"], monLecteur["nomAction"].ToString());
-                uneAssociationLiee = new Association((int)monLecteur["id_association"]);
+                uneAssociationLiee = new Association((int)monLecteur["id_association"], monLecteur["nomAsso"].ToString(), monLecteur["nomResponsable"].ToString(), new Mission((int)monLecteur["id_mission"]), new Pays((int)monLecteur["idPays"], monLecteur["nomPays"].ToString()));
 
                 lesPartenariats.Add(new Partenariat(IDPartenariat, budgetPrevisionnel, coutPartenariat, uneActionMenee, uneAssociationLiee));
             }

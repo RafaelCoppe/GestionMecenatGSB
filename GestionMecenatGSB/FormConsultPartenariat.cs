@@ -21,6 +21,8 @@ namespace GestionMecenatGSB
         private void btnAfficherPartenariats_Click(object sender, EventArgs e)
         {
             dtgAfficherPartenariats.DataSource = PartenariatManager.GetInstance().GetLesPartenariats();
+            dtgAfficherPartenariats.Columns[3].Visible = false;
+            dtgAfficherPartenariats.Columns[4].Visible = false;
         }
     }
 }
