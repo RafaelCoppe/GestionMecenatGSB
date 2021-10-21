@@ -64,8 +64,8 @@ namespace GestionMecenatGSB
                 int nbAjouts;
 
                 //On récupère les deux valeurs budget et coût réel
-                float budgetPrevu = float.Parse(txtBudgetPrevu.Text);
-                float coutPartenariat = float.Parse(txtCoutPartenariat.Text);
+                decimal budgetPrevu = decimal.Parse(txtBudgetPrevu.Text);
+                decimal coutPartenariat = decimal.Parse(txtCoutPartenariat.Text);
 
                 //On crée deux objets ActionMenee et Association
                 ActionMenee choixActionMenee = new ActionMenee((int)cbxActionMenee.SelectedValue, cbxActionMenee.Text);
