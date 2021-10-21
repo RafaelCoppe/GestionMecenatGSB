@@ -48,7 +48,7 @@ namespace GestionMecenatGSB
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dtgConsultLimiteMecenat);
             this.Name = "FormConsultLimiteMecenat";
-            this.Text = "FormConsultLimiteMecenat";
+            this.Text = "Gestion des limites de mécénat";
             ((System.ComponentModel.ISupportInitialize)(this.dtgConsultLimiteMecenat)).EndInit();
             this.ResumeLayout(false);
 

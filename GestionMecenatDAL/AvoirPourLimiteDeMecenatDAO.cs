@@ -67,12 +67,9 @@ namespace GestionMecenatDAL
             Pays lePays;
             Annee uneAnnee;
 
-            // on crée la collection lesClients de type List<Client> qui va contenir les
-            // caractéristiques des clients enregistrés dans la base de donnes
             List<AvoirPourLimiteDeMecenat> lesLimitesDeMecenat;
             lesLimitesDeMecenat = new List<AvoirPourLimiteDeMecenat>();
 
-            // on exécute la requête et on récupère dans un DataReader les enregistrements
             maCommand.CommandText = "GetLesLimitesDeMecenat";
 
             SqlDataReader monLecteur = maCommand.ExecuteReader();

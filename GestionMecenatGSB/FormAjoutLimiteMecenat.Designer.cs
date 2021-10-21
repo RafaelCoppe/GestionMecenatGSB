@@ -113,7 +113,7 @@ namespace GestionMecenatGSB
             this.Controls.Add(this.lblPays);
             this.Controls.Add(this.lblAnnee);
             this.Name = "FormAjoutLimiteMecenat";
-            this.Text = "FormAjoutLimiteMecenat";
+            this.Text = "Création des limites de mécénat";
             this.ResumeLayout(false);
             this.PerformLayout();
 
