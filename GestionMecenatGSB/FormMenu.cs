@@ -45,5 +45,11 @@ namespace GestionMecenatGSB
             FormConsultAssoc leFormConsultAssoc = new FormConsultAssoc();
             leFormConsultAssoc.Show();
         }
+
+        private void associationsToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FormModifAssociation leFormModifAssoc = new FormModifAssociation();
+            leFormModifAssoc.Show();
+        }
     }
 }
