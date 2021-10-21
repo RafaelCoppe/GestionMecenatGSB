@@ -40,7 +40,7 @@ namespace GestionMecenatDAL
             //Création des paramètres
             maCommand.Parameters.Add("idAnnee", System.Data.SqlDbType.Int);
             maCommand.Parameters.Add("idPays", System.Data.SqlDbType.Int);
-            maCommand.Parameters.Add("sommeMaximum", System.Data.SqlDbType.Float);
+            maCommand.Parameters.Add("sommeMaximum", System.Data.SqlDbType.Decimal);
 
             maCommand.Parameters["idAnnee"].Value = uneLimiteMecenat.UneAnnee.NumAnnee;
             maCommand.Parameters["idPays"].Value = uneLimiteMecenat.LePays.Id;
@@ -63,7 +63,7 @@ namespace GestionMecenatDAL
         public List<AvoirPourLimiteDeMecenat> GetLimiteDeMecenat()
         {
             SqlCommand maCommand = Commande.GetObjCommande();
-            int plafondMecenat;
+            decimal plafondMecenat;
             Pays lePays;
             Annee uneAnnee;
 
@@ -79,7 +79,7 @@ namespace GestionMecenatDAL
 
             while (monLecteur.Read())
             {
-                plafondMecenat = (int)monLecteur["plafondMecenat"];
+                plafondMecenat = (decimal)monLecteur["plafondMecenat"];
                 lePays = new Pays(((int)monLecteur["idPays"]), (monLecteur["libelle"].ToString()));
                 uneAnnee = new Annee(((int)monLecteur["idAnnee"]));
 

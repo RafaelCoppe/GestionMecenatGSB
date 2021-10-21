@@ -27,7 +27,7 @@ namespace GestionMecenatBLL
         }
 
         // Appel de la méthode AjoutLimiteDeMecenat de la DAO
-        public int AjoutLimiteMecenat(float SommeMaximum, int idPays, string libellePays, int idAnnee)
+        public int AjoutLimiteMecenat(decimal SommeMaximum, int idPays, string libellePays, int idAnnee)
         {
             Pays unPays = new Pays(idPays, libellePays);
             Annee uneAnnee = new Annee(idAnnee);
