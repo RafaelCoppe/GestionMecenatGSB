@@ -24,24 +24,29 @@ namespace GestionMecenatBO
     {
         //Déclaration des variables
         private int id;
+<<<<<<< HEAD
         private float budgetPrevisionnel;
         private float coutPartenariat;
         private int idActionMennee;
         private int idAssociationLiee;
+=======
+        private decimal budgetPrevisionnel;
+        private decimal coutPartenariat;
+>>>>>>> master
         private ActionMenee actionMennee;
         private Association associationLiee;
 
 
         //Accesseurs en lecture et en écriture
         public int Id { get => id; set => id = value; }
-        public float BudgetPrevisionnel { get => budgetPrevisionnel; set => budgetPrevisionnel = value; }
-        public float CoutPartenariat { get => coutPartenariat; set => coutPartenariat = value; }
+        public decimal BudgetPrevisionnel { get => budgetPrevisionnel; set => budgetPrevisionnel = value; }
+        public decimal CoutPartenariat { get => coutPartenariat; set => coutPartenariat = value; }
 
         public ActionMenee ActionMennee { get => actionMennee; set => actionMennee = value; }
         public Association AssociationLiee { get => associationLiee; set => associationLiee = value; }
 
         //Constructeur avec id
-        public Partenariat(int id, float budgetPrevisionnel, float coutPartenariat, ActionMenee actionMennee, Association uneAssociation)
+        public Partenariat(int id, decimal budgetPrevisionnel, decimal coutPartenariat, ActionMenee actionMennee, Association uneAssociation)
         {
             this.id = id;
             this.budgetPrevisionnel = budgetPrevisionnel;
@@ -52,7 +57,7 @@ namespace GestionMecenatBO
         }
 
         //Constructeur sans id
-        public Partenariat(float budgetPrevisionnel, float coutPartenariat, ActionMenee actionMennee, Association uneAssociation)
+        public Partenariat(decimal budgetPrevisionnel, decimal coutPartenariat, ActionMenee actionMennee, Association uneAssociation)
         {
             this.budgetPrevisionnel = budgetPrevisionnel;
             this.coutPartenariat = coutPartenariat;
