@@ -25,7 +25,7 @@ namespace GestionMecenatBLL
         }
 
         //Appel de la méthode AjoutPartenariat de la DAO
-        public int AjoutPartenariat(float budgetPrevisionnel, float coutPartenariat, ActionMenee uneActionMenee, Association uneAssociation)
+        public int AjoutPartenariat(decimal budgetPrevisionnel, decimal coutPartenariat, ActionMenee uneActionMenee, Association uneAssociation)
         {
             Partenariat unPartenariat = new Partenariat(budgetPrevisionnel, coutPartenariat, uneActionMenee, uneAssociation);
             return PartenariatDAO.GetInstance().AjoutPartenariat(unPartenariat);
