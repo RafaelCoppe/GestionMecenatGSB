@@ -24,15 +24,10 @@ namespace GestionMecenatBO
     {
         //Déclaration des variables
         private int id;
-<<<<<<< HEAD
-        private float budgetPrevisionnel;
-        private float coutPartenariat;
         private int idActionMennee;
         private int idAssociationLiee;
-=======
         private decimal budgetPrevisionnel;
         private decimal coutPartenariat;
->>>>>>> master
         private ActionMenee actionMennee;
         private Association associationLiee;
 
@@ -67,7 +62,7 @@ namespace GestionMecenatBO
         }
 
         //Constructeur avec un id à la place des objets ActionMenee et Association
-        public Partenariat(float budgetPrevisionnel, float coutPartenariat, int actionMennee, int uneAssociation)
+        public Partenariat(decimal budgetPrevisionnel, decimal coutPartenariat, int actionMennee, int uneAssociation)
         {
             this.budgetPrevisionnel = budgetPrevisionnel;
             this.coutPartenariat = coutPartenariat;

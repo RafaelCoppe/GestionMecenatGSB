@@ -29,8 +29,8 @@ namespace GestionMecenatDAL
         {
             SqlCommand maCommand = Commande.GetObjCommande();
             int IDPartenariat;
-            float budgetPrevisionnel;
-            float coutPartenariat;
+            decimal budgetPrevisionnel;
+            decimal coutPartenariat;
             //int idAction;
             //int idAssociation;
             ActionMenee uneActionMenee;
@@ -50,8 +50,8 @@ namespace GestionMecenatDAL
             while (monLecteur.Read())
             {
                 IDPartenariat = (int)monLecteur["id"];
-                budgetPrevisionnel = float.Parse(monLecteur["budgetPrevisionnel"].ToString());
-                coutPartenariat = float.Parse(monLecteur["coutPartenariat"].ToString());
+                budgetPrevisionnel = decimal.Parse(monLecteur["budgetPrevisionnel"].ToString());
+                coutPartenariat = decimal.Parse(monLecteur["coutPartenariat"].ToString());
                 uneActionMenee = new ActionMenee((int)monLecteur["id_actionMenee"], monLecteur["nomAction"].ToString());
                 uneAssociationLiee = new Association((int)monLecteur["id_association"]);
 
