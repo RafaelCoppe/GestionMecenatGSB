@@ -51,9 +51,12 @@ namespace GestionMecenatGSB
 
         private void btnModifier_Click(object sender, EventArgs e)
         {
-            Partenariat lePartenariatModifie = new Partenariat(decimal.Parse(txtBudgetPrev.Text), decimal.Parse(txtCoutReel.Text), (int)cbxActionMenee.SelectedValue, (int)cbxAssoLiee.SelectedValue);
+            decimal budgetPrev = decimal.Parse(txtBudgetPrev.Text);
+            decimal coutReel = decimal.Parse(txtCoutReel.Text);
+            int idActionMenee = (int)cbxActionMenee.SelectedValue;
+            int idAssoLiee = (int)cbxAssoLiee.SelectedValue;
 
-            int nb = PartenariatManager.GetInstance().ModifPartenariat(lePartenariatModifie);
+            int nb = PartenariatManager.GetInstance().ModifPartenariat(budgetPrev, coutReel, idActionMenee, idAssoLiee);
         }
 
         private void btnAnnuler_Click(object sender, EventArgs e)
