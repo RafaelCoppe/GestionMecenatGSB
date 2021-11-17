@@ -1,4 +1,5 @@
 ﻿using GestionMecenatBLL;
+using GestionMecenatBO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -50,7 +51,7 @@ namespace GestionMecenatGSB
 
         private void btnModifier_Click(object sender, EventArgs e)
         {
-
+            Partenariat lePartenariatModifie = new Partenariat(decimal.Parse(txtBudgetPrev.Text), decimal.Parse(txtCoutReel.Text), (int)cbxActionMenee.SelectedValue, (int)cbxAssoLiee.SelectedValue);
         }
 
         private void btnAnnuler_Click(object sender, EventArgs e)
