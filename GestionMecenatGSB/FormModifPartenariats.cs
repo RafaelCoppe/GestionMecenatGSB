@@ -44,8 +44,22 @@ namespace GestionMecenatGSB
             txtBudgetPrev.Text = dtgPartenariats.Rows[e.RowIndex].Cells[1].Value.ToString();
             txtCoutReel.Text = dtgPartenariats.Rows[e.RowIndex].Cells[2].Value.ToString();
 
-            cbxActionMenee.SelectedText = dtgPartenariats.Rows[e.RowIndex].Cells[3].Value.ToString();
-            cbxAssoLiee.SelectedText = dtgPartenariats.Rows[e.RowIndex].Cells[4].Value.ToString();
+            /*cbxAssoLiee.SelectedIndex = dtgPartenariats.Rows[e.RowIndex].Cells[3].Value.ToString();
+            cbxActionMenee.SelectedText = dtgPartenariats.Rows[e.RowIndex].Cells[4].Value.ToString();*/
+        }
+
+        private void btnModifier_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAnnuler_Click(object sender, EventArgs e)
+        {
+            txtBudgetPrev.Text = "";
+            txtCoutReel.Text = "";
+
+            cbxAssoLiee.SelectedIndex = -1;
+            cbxActionMenee.SelectedIndex = -1;
         }
     }
 }

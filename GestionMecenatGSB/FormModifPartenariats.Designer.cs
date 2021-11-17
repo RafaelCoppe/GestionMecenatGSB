@@ -51,6 +51,7 @@ namespace GestionMecenatGSB
             this.btnAnnuler.TabIndex = 21;
             this.btnAnnuler.Text = "Annuler";
             this.btnAnnuler.UseVisualStyleBackColor = true;
+            this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
             // 
             // btnModifier
             // 
@@ -60,6 +61,7 @@ namespace GestionMecenatGSB
             this.btnModifier.TabIndex = 20;
             this.btnModifier.Text = "Modifier le Partenariat";
             this.btnModifier.UseVisualStyleBackColor = true;
+            this.btnModifier.Click += new System.EventHandler(this.btnModifier_Click);
             // 
             // lblActionMenee
             // 
