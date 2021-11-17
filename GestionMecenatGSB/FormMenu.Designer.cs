@@ -48,6 +48,7 @@ namespace GestionMecenatGSB
             this.actionsToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.partenariatsToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.limiteDeMécénatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.limitesDeMécénatToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -107,7 +108,8 @@ namespace GestionMecenatGSB
             this.menuDesModificationsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.associationsToolStripMenuItem1,
             this.actionsToolStripMenuItem1,
-            this.iToolStripMenuItem});
+            this.iToolStripMenuItem,
+            this.limitesDeMécénatToolStripMenuItem1});
             this.menuDesModificationsToolStripMenuItem.Name = "menuDesModificationsToolStripMenuItem";
             this.menuDesModificationsToolStripMenuItem.Size = new System.Drawing.Size(147, 20);
             this.menuDesModificationsToolStripMenuItem.Text = "Menu des Modifications";
@@ -115,19 +117,19 @@ namespace GestionMecenatGSB
             // associationsToolStripMenuItem1
             // 
             this.associationsToolStripMenuItem1.Name = "associationsToolStripMenuItem1";
-            this.associationsToolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
+            this.associationsToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.associationsToolStripMenuItem1.Text = "Associations";
             // 
             // actionsToolStripMenuItem1
             // 
             this.actionsToolStripMenuItem1.Name = "actionsToolStripMenuItem1";
-            this.actionsToolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
+            this.actionsToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.actionsToolStripMenuItem1.Text = "Actions";
             // 
             // iToolStripMenuItem
             // 
             this.iToolStripMenuItem.Name = "iToolStripMenuItem";
-            this.iToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.iToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.iToolStripMenuItem.Text = "Partenariats";
             // 
             // menuDesSuppressionsToolStripMenuItem
@@ -195,6 +197,13 @@ namespace GestionMecenatGSB
             this.limiteDeMécénatToolStripMenuItem.Text = "Limites de mécénat";
             this.limiteDeMécénatToolStripMenuItem.Click += new System.EventHandler(this.limiteDeMécénatToolStripMenuItem_Click);
             // 
+            // limitesDeMécénatToolStripMenuItem1
+            // 
+            this.limitesDeMécénatToolStripMenuItem1.Name = "limitesDeMécénatToolStripMenuItem1";
+            this.limitesDeMécénatToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.limitesDeMécénatToolStripMenuItem1.Text = "Limites de mécénat";
+            this.limitesDeMécénatToolStripMenuItem1.Click += new System.EventHandler(this.limitesDeMécénatToolStripMenuItem1_Click);
+            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -232,6 +241,7 @@ namespace GestionMecenatGSB
         private System.Windows.Forms.ToolStripMenuItem actionsToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem partenariatsToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem limiteDeMécénatToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem limitesDeMécénatToolStripMenuItem1;
     }
 }
 

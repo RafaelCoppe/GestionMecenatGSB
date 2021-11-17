@@ -29,7 +29,7 @@ namespace GestionMecenatGSB
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlProd = new System.Windows.Forms.Panel();
+            this.pnlLimiteMecenat = new System.Windows.Forms.Panel();
             this.btnAnnulLimiteMecenat = new System.Windows.Forms.Button();
             this.btnModifLimiteMecenat = new System.Windows.Forms.Button();
             this.cbxLimiteMecenat = new System.Windows.Forms.ComboBox();
@@ -38,22 +38,22 @@ namespace GestionMecenatGSB
             this.cbxAnneeModif = new System.Windows.Forms.ComboBox();
             this.lblPlafondMecenatModif = new System.Windows.Forms.Label();
             this.lblAnneeModif = new System.Windows.Forms.Label();
-            this.pnlProd.SuspendLayout();
+            this.pnlLimiteMecenat.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pnlProd
+            // pnlLimiteMecenat
             // 
-            this.pnlProd.Controls.Add(this.txtSommeMaximumModif);
-            this.pnlProd.Controls.Add(this.btnAnnulLimiteMecenat);
-            this.pnlProd.Controls.Add(this.cbxAnneeModif);
-            this.pnlProd.Controls.Add(this.lblAnneeModif);
-            this.pnlProd.Controls.Add(this.btnModifLimiteMecenat);
-            this.pnlProd.Controls.Add(this.lblPlafondMecenatModif);
-            this.pnlProd.Location = new System.Drawing.Point(224, 139);
-            this.pnlProd.Name = "pnlProd";
-            this.pnlProd.Size = new System.Drawing.Size(446, 258);
-            this.pnlProd.TabIndex = 5;
-            this.pnlProd.Visible = false;
+            this.pnlLimiteMecenat.Controls.Add(this.txtSommeMaximumModif);
+            this.pnlLimiteMecenat.Controls.Add(this.btnAnnulLimiteMecenat);
+            this.pnlLimiteMecenat.Controls.Add(this.cbxAnneeModif);
+            this.pnlLimiteMecenat.Controls.Add(this.lblAnneeModif);
+            this.pnlLimiteMecenat.Controls.Add(this.btnModifLimiteMecenat);
+            this.pnlLimiteMecenat.Controls.Add(this.lblPlafondMecenatModif);
+            this.pnlLimiteMecenat.Location = new System.Drawing.Point(224, 139);
+            this.pnlLimiteMecenat.Name = "pnlLimiteMecenat";
+            this.pnlLimiteMecenat.Size = new System.Drawing.Size(446, 258);
+            this.pnlLimiteMecenat.TabIndex = 5;
+            this.pnlLimiteMecenat.Visible = false;
             // 
             // btnAnnulLimiteMecenat
             // 
@@ -63,6 +63,7 @@ namespace GestionMecenatGSB
             this.btnAnnulLimiteMecenat.TabIndex = 7;
             this.btnAnnulLimiteMecenat.Text = "Annuler la modification";
             this.btnAnnulLimiteMecenat.UseVisualStyleBackColor = true;
+            this.btnAnnulLimiteMecenat.Click += new System.EventHandler(this.btnAnnulLimiteMecenat_Click);
             // 
             // btnModifLimiteMecenat
             // 
@@ -130,13 +131,13 @@ namespace GestionMecenatGSB
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pnlProd);
+            this.Controls.Add(this.pnlLimiteMecenat);
             this.Controls.Add(this.cbxLimiteMecenat);
             this.Controls.Add(this.lblLimiteMecenat);
             this.Name = "FormModifLimiteMecenat";
             this.Text = "FormModifLimiteMecenat";
-            this.pnlProd.ResumeLayout(false);
-            this.pnlProd.PerformLayout();
+            this.pnlLimiteMecenat.ResumeLayout(false);
+            this.pnlLimiteMecenat.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,7 +145,7 @@ namespace GestionMecenatGSB
 
         #endregion
 
-        private System.Windows.Forms.Panel pnlProd;
+        private System.Windows.Forms.Panel pnlLimiteMecenat;
         private System.Windows.Forms.Button btnAnnulLimiteMecenat;
         private System.Windows.Forms.Button btnModifLimiteMecenat;
         private System.Windows.Forms.ComboBox cbxLimiteMecenat;
