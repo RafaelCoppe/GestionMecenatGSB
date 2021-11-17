@@ -52,6 +52,8 @@ namespace GestionMecenatGSB
         private void btnModifier_Click(object sender, EventArgs e)
         {
             Partenariat lePartenariatModifie = new Partenariat(decimal.Parse(txtBudgetPrev.Text), decimal.Parse(txtCoutReel.Text), (int)cbxActionMenee.SelectedValue, (int)cbxAssoLiee.SelectedValue);
+
+            int nb = PartenariatManager.GetInstance().ModifPartenariat(lePartenariatModifie);
         }
 
         private void btnAnnuler_Click(object sender, EventArgs e)
