@@ -30,5 +30,10 @@ namespace GestionMecenatBO
         {
             this.libelle = libelle;
         }
+
+        public Pays(int id)
+        {
+            this.id = id;
+        }
     }
 }

@@ -112,5 +112,43 @@ namespace GestionMecenatDAL
             return nb;
         }
 
+        public int ModifAssociation(Association uneAssociation)
+        {
+            SqlCommand commande = Commande.GetObjCommande();
+
+            commande.CommandText = "modifAssociation";
+
+            commande.Parameters.Add("parNomAssoc", System.Data.SqlDbType.VarChar);
+            commande.Parameters["parNomAssoc"].Value = uneAssociation.NomAssociation;
+
+            commande.Parameters.Add("parNomResp", System.Data.SqlDbType.VarChar);
+            commande.Parameters["parNomResp"].Value = uneAssociation.NomResponsbale;
+
+            commande.Parameters.Add("idMission", System.Data.SqlDbType.Int);
+            commande.Parameters["idMission"].Value = uneAssociation.LaMission.Id;
+
+            commande.Parameters.Add("idPays", System.Data.SqlDbType.Int);
+            commande.Parameters["idPays"].Value = uneAssociation.LePays.Id;
+
+            int nb = commande.ExecuteNonQuery();
+            commande.Connection.Close();
+            return nb;
+        }
+
+        //public Association RecupererAssociation(int id)
+        //{
+        //    string nomAssociation;
+        //    string nomResponsable;
+        //    Mission laMission;
+        //    Pays lePays;
+
+        //    SqlCommand commande = Commande.GetObjCommande();
+        //    commande.Parameters.Clear();
+        //    commande.CommandText = "SELECT id, nomAssoc, nom Resp, id_payss, id_mission FROM association WHERE id = @id"; 
+
+        //    commande.Parameters.Add("Id", System.Data.SqlDbType.Int);
+        //    commande.Parameters["Id"].Value = id;
+
+        //}
     }
 }
