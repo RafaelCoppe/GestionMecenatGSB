@@ -38,7 +38,7 @@ namespace GestionMecenatGSB
             {
                 msgErr += ("Veuillez sélectionner un annee \n");
             }
-            if (txtSommeMaximum.Text.Trim() == "" || txtSommeMaximum.Text.Trim() == "0") //Si il n'y a pas de somme maximum
+            if (txtSommeMaximum.Text.Trim() == "," || txtSommeMaximum.Text.Trim() == "0") //Si il n'y a pas de somme maximum
             {
                 msgErr += ("Veuillez saisir une somme maximum \n");
             }
@@ -49,7 +49,7 @@ namespace GestionMecenatGSB
             }
             else
             {
-                float SommeMaximum = float.Parse(txtSommeMaximum.Text);
+                decimal SommeMaximum = decimal.Parse(txtSommeMaximum.Text);
                 try
                 {
                     nbAjouts = AvoirPourLimiteDeMecenatManager.GetInstance().AjoutLimiteMecenat(SommeMaximum, (int)cbxPays.SelectedValue, cbxPays.Text, (int)cbxAnnee.SelectedValue);

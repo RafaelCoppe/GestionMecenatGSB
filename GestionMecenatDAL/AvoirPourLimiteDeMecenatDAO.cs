@@ -40,7 +40,7 @@ namespace GestionMecenatDAL
             //Création des paramètres
             maCommand.Parameters.Add("idAnnee", System.Data.SqlDbType.Int);
             maCommand.Parameters.Add("idPays", System.Data.SqlDbType.Int);
-            maCommand.Parameters.Add("sommeMaximum", System.Data.SqlDbType.Float);
+            maCommand.Parameters.Add("sommeMaximum", System.Data.SqlDbType.Decimal);
 
             maCommand.Parameters["idAnnee"].Value = uneLimiteMecenat.UneAnnee.NumAnnee;
             maCommand.Parameters["idPays"].Value = uneLimiteMecenat.LePays.Id;
@@ -60,5 +60,37 @@ namespace GestionMecenatDAL
             return nbEnregAjout;
         }
 
+        public List<AvoirPourLimiteDeMecenat> GetLimiteDeMecenat()
+        {
+            SqlCommand maCommand = Commande.GetObjCommande();
+            decimal plafondMecenat;
+            Pays lePays;
+            Annee uneAnnee;
+
+            List<AvoirPourLimiteDeMecenat> lesLimitesDeMecenat;
+            lesLimitesDeMecenat = new List<AvoirPourLimiteDeMecenat>();
+
+            maCommand.CommandText = "GetLesLimitesDeMecenat";
+
+            SqlDataReader monLecteur = maCommand.ExecuteReader();
+
+            // pour chaque enregistrement du DataReader on crée un objet instance de
+            // Client que l'on ajoute dans la collection lesClients
+
+            while (monLecteur.Read())
+            {
+                plafondMecenat = (decimal)monLecteur["plafondMecenat"];
+                lePays = new Pays(((int)monLecteur["idPays"]), (monLecteur["libelle"].ToString()));
+                uneAnnee = new Annee(((int)monLecteur["idAnnee"]));
+
+                lesLimitesDeMecenat.Add(new AvoirPourLimiteDeMecenat(plafondMecenat, lePays, uneAnnee ));
+            }
+
+            monLecteur.Close();
+
+            maCommand.Connection.Close();
+
+            return lesLimitesDeMecenat;
+        }
     }
 }

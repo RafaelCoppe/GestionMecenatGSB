@@ -64,11 +64,19 @@
     <Compile Include="FormAjoutPartenariat.Designer.cs">
       <DependentUpon>FormAjoutPartenariat.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="FormConsultPartenariat.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormConsultPartenariat.Designer.cs">
       <DependentUpon>FormConsultPartenariat.cs</DependentUpon>
+=======
+    <Compile Include="FormConsultLimiteMecenat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsultLimiteMecenat.Designer.cs">
+      <DependentUpon>FormConsultLimiteMecenat.cs</DependentUpon>
+>>>>>>> 955f8f3af5e60ee1df396788acd24aefc8bccb88
     </Compile>
     <Compile Include="FormMenu.cs">
       <SubType>Form</SubType>
@@ -87,8 +95,13 @@
     <EmbeddedResource Include="FormAjoutPartenariat.resx">
       <DependentUpon>FormAjoutPartenariat.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="FormConsultPartenariat.resx">
       <DependentUpon>FormConsultPartenariat.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="FormConsultLimiteMecenat.resx">
+      <DependentUpon>FormConsultLimiteMecenat.cs</DependentUpon>
+>>>>>>> 955f8f3af5e60ee1df396788acd24aefc8bccb88
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
@@ -102,6 +115,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -111,9 +125,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GestionMecenatBLL\GestionMecenatBLL.csproj">
