@@ -24,6 +24,12 @@ namespace GestionMecenatBLL
         {
         }
 
+        //Appel de la méthode GetPartenariats de la DAO
+        public List<Partenariat> GetLesPartenariats()
+        {
+            return PartenariatDAO.GetInstance().GetPartenariats();
+        }
+
         //Appel de la méthode AjoutPartenariat de la DAO
         public int AjoutPartenariat(decimal budgetPrevisionnel, decimal coutPartenariat, ActionMenee uneActionMenee, Association uneAssociation)
         {
