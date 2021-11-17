@@ -36,5 +36,11 @@ namespace GestionMecenatBLL
             Partenariat unPartenariat = new Partenariat(budgetPrevisionnel, coutPartenariat, uneActionMenee, uneAssociation);
             return PartenariatDAO.GetInstance().AjoutPartenariat(unPartenariat);
         }
+
+        public int ModifPartenariat(Decimal budgetPrev, Decimal coutReel, int idActionMenee, int idAssociationLiee)
+        {
+            Partenariat lePartenariatModifie = new Partenariat(budgetPrev, coutReel, idActionMenee, idAssociationLiee);
+            return PartenariatDAO.GetInstance().ModifPartenariat(lePartenariatModifie);
+        }
     }
 }
