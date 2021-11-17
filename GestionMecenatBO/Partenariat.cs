@@ -24,6 +24,8 @@ namespace GestionMecenatBO
     {
         //Déclaration des variables
         private int id;
+        private int idActionMennee;
+        private int idAssociationLiee;
         private decimal budgetPrevisionnel;
         private decimal coutPartenariat;
         private ActionMenee actionMennee;
@@ -60,6 +62,16 @@ namespace GestionMecenatBO
 
             this.actionMennee = actionMennee;
             this.associationLiee = uneAssociation;
+        }
+
+        //Constructeur avec un id à la place des objets ActionMenee et Association
+        public Partenariat(decimal budgetPrevisionnel, decimal coutPartenariat, int actionMennee, int uneAssociation)
+        {
+            this.budgetPrevisionnel = budgetPrevisionnel;
+            this.coutPartenariat = coutPartenariat;
+
+            this.idActionMennee = actionMennee;
+            this.idAssociationLiee = uneAssociation;
         }
     }
 }
