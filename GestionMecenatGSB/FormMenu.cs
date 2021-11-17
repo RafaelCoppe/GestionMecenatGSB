@@ -45,5 +45,11 @@ namespace GestionMecenatGSB
             FormConsultLimiteMecenat laLimiteMecenatConsult = new FormConsultLimiteMecenat();
             laLimiteMecenatConsult.Show();
         }
+
+        private void iToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormModifPartenariats lePartenariatModif = new FormModifPartenariats();
+            lePartenariatModif.Show();
+        }
     }
 }
