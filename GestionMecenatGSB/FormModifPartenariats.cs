@@ -22,6 +22,8 @@ namespace GestionMecenatGSB
         private void majCbx() //Mise à jour des deux combobox
         {
             dtgPartenariats.DataSource = PartenariatManager.GetInstance().GetLesPartenariats();
+            dtgPartenariats.Columns[3].Visible = false;
+            dtgPartenariats.Columns[4].Visible = false;
 
             cbxActionMenee.DisplayMember = "libelle";
             cbxActionMenee.ValueMember = "id";
@@ -33,6 +35,17 @@ namespace GestionMecenatGSB
 
             cbxActionMenee.SelectedItem = null;
             cbxAssoLiee.SelectedItem = null;
+        }
+
+        private void dtgPartenariats_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int idPartenariatChoisi = (int)dtgPartenariats.Rows[e.RowIndex].Cells[0].Value;
+
+            txtBudgetPrev.Text = dtgPartenariats.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txtCoutReel.Text = dtgPartenariats.Rows[e.RowIndex].Cells[2].Value.ToString();
+
+            cbxActionMenee.SelectedText = dtgPartenariats.Rows[e.RowIndex].Cells[3].Value.ToString();
+            cbxAssoLiee.SelectedText = dtgPartenariats.Rows[e.RowIndex].Cells[4].Value.ToString();
         }
     }
 }

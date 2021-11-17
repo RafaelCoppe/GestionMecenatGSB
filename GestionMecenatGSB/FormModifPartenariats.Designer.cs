@@ -134,6 +134,7 @@ namespace GestionMecenatGSB
             this.dtgPartenariats.Name = "dtgPartenariats";
             this.dtgPartenariats.Size = new System.Drawing.Size(554, 333);
             this.dtgPartenariats.TabIndex = 11;
+            this.dtgPartenariats.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgPartenariats_CellContentDoubleClick);
             // 
             // FormModifPartenariats
             // 
