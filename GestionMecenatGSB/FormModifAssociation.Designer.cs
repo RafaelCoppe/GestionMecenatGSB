@@ -49,7 +49,6 @@ namespace GestionMecenatGSB
             this.cbxModifAssoc.Name = "cbxModifAssoc";
             this.cbxModifAssoc.Size = new System.Drawing.Size(121, 21);
             this.cbxModifAssoc.TabIndex = 0;
-            this.cbxModifAssoc.SelectionChangeCommitted += new System.EventHandler(this.cbxModifAssoc_SelectionChangeCommitted);
             // 
             // lblListeAssocModif
             // 

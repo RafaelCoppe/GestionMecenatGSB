@@ -31,22 +31,11 @@ namespace GestionMecenatGSB
             cbxModifAssoc.DataSource = AssociationManager.GetInstance().GetAssociations();
         }
 
-        private void cbxModifAssoc_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            SqlCommand commande = Commande.GetObjCommande();
-            SqlDataReader monLecteur;
-            int idMod = (int)cbxModifAssoc.SelectedValue;
-            
-            commande.CommandType = CommandType.StoredProcedure;
-            commande.CommandText = "GetLesAssociations";
+        //private void cbxModifAssoc_SelectionChangeCommitted(object sender, EventArgs e)
+        //{
+        //    int idAssoc = (int)cbxModifAssoc.SelectedValue;
+        //    AssociationDAO uneAssociation = AssociationManager.GetInstance().CreerAssociation();
 
-
-            monLecteur = commande.ExecuteReader();
-
-            DataTable uneAssociation = new DataTable();
-            uneAssociation.Load(monLecteur);
-            txtBoxModifNom.Text = (string)uneAssociation.Rows[0]["nomAssociation"];
-
-        }
+        //}
     }
 }
