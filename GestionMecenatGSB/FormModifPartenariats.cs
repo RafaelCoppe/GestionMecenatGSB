@@ -14,6 +14,7 @@ namespace GestionMecenatGSB
 {
     public partial class FormModifPartenariats : Form
     {
+        private int idPartenariatChoisi = 0;
         public FormModifPartenariats()
         {
             InitializeComponent();
@@ -40,7 +41,7 @@ namespace GestionMecenatGSB
 
         private void dtgPartenariats_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            int idPartenariatChoisi = (int)dtgPartenariats.Rows[e.RowIndex].Cells[0].Value;
+            idPartenariatChoisi = (int)dtgPartenariats.Rows[e.RowIndex].Cells[0].Value;
 
             txtBudgetPrev.Text = dtgPartenariats.Rows[e.RowIndex].Cells[1].Value.ToString();
             txtCoutReel.Text = dtgPartenariats.Rows[e.RowIndex].Cells[2].Value.ToString();
@@ -51,12 +52,16 @@ namespace GestionMecenatGSB
 
         private void btnModifier_Click(object sender, EventArgs e)
         {
+            if(idPartenariatChoisi != 0)
+            {
             decimal budgetPrev = decimal.Parse(txtBudgetPrev.Text);
             decimal coutReel = decimal.Parse(txtCoutReel.Text);
             int idActionMenee = (int)cbxActionMenee.SelectedValue;
             int idAssoLiee = (int)cbxAssoLiee.SelectedValue;
 
-            int nb = PartenariatManager.GetInstance().ModifPartenariat(budgetPrev, coutReel, idActionMenee, idAssoLiee);
+            int nb = PartenariatManager.GetInstance().ModifPartenariat(idPartenariatChoisi, budgetPrev, coutReel, idActionMenee, idAssoLiee);
+            }
+            
         }
 
         private void btnAnnuler_Click(object sender, EventArgs e)

@@ -110,11 +110,13 @@ namespace GestionMecenatDAL
             SqlCommand maCommand = Commande.GetObjCommande();
 
             //Création des paramètres
+            maCommand.Parameters.Add("idPartenariatChoisi", System.Data.SqlDbType.Int);
             maCommand.Parameters.Add("budgetPrevu", System.Data.SqlDbType.Decimal);
             maCommand.Parameters.Add("coutReel", System.Data.SqlDbType.Decimal);
             maCommand.Parameters.Add("idActionMenee", System.Data.SqlDbType.Int);
             maCommand.Parameters.Add("idAssoLiee", System.Data.SqlDbType.Int);
 
+            maCommand.Parameters["idPartenariatChoisi"].Value = lePartenariatModifie.Id;
             maCommand.Parameters["budgetPrevu"].Value = lePartenariatModifie.BudgetPrevisionnel;
             maCommand.Parameters["coutReel"].Value = lePartenariatModifie.CoutPartenariat;
             maCommand.Parameters["idActionMenee"].Value = lePartenariatModifie.ActionMennee.Id;
