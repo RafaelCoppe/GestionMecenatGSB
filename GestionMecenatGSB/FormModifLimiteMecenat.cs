@@ -13,19 +13,23 @@ namespace GestionMecenatGSB
 {
     public partial class FormModifLimiteMecenat : Form
     {
+        private int idLimiteMecanatChoisi;
         public FormModifLimiteMecenat()
         {
             InitializeComponent();
-            cbxLimiteMecenat.DisplayMember = "Identite";
-            cbxLimiteMecenat.ValueMember = "id";
-            cbxLimiteMecenat.DataSource = AvoirPourLimiteDeMecenatManager.GetInstance().GetLesLimitesDeMecenat();
+            majDonnees();
+        }
+        private void majDonnees()
+        {
+            dtgInfosLimiteMecenat.DataSource = AvoirPourLimiteDeMecenatManager.GetInstance().GetLimiteDeMecenat();
+
+            dtgInfosLimiteMecenat.Columns[1].Visible = false;
+            dtgInfosLimiteMecenat.Columns[2].Visible = false;
+
+            dtgInfosLimiteMecenat.Columns[0].HeaderText = "Plafond de mécénat";
+            dtgInfosLimiteMecenat.Columns[3].HeaderText = "Année";
+            dtgInfosLimiteMecenat.Columns[4].HeaderText = "Pays";
         }
 
-        private void btnAnnulLimiteMecenat_Click(object sender, EventArgs e)
-        {
-            pnlLimiteMecenat.Visible = false;
-            lblLimiteMecenat.Visible = true;
-            cbxLimiteMecenat.Visible = true;
-        }
     }
 }

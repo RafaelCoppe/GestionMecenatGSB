@@ -29,72 +29,19 @@ namespace GestionMecenatGSB
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlLimiteMecenat = new System.Windows.Forms.Panel();
-            this.btnAnnulLimiteMecenat = new System.Windows.Forms.Button();
-            this.btnModifLimiteMecenat = new System.Windows.Forms.Button();
-            this.cbxLimiteMecenat = new System.Windows.Forms.ComboBox();
-            this.lblLimiteMecenat = new System.Windows.Forms.Label();
             this.txtSommeMaximumModif = new System.Windows.Forms.MaskedTextBox();
             this.cbxAnneeModif = new System.Windows.Forms.ComboBox();
-            this.lblPlafondMecenatModif = new System.Windows.Forms.Label();
             this.lblAnneeModif = new System.Windows.Forms.Label();
-            this.pnlLimiteMecenat.SuspendLayout();
+            this.btnModifLimiteMecenat = new System.Windows.Forms.Button();
+            this.lblPlafondMecenatModif = new System.Windows.Forms.Label();
+            this.lblLimiteMecenat = new System.Windows.Forms.Label();
+            this.dtgInfosLimiteMecenat = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgInfosLimiteMecenat)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pnlLimiteMecenat
-            // 
-            this.pnlLimiteMecenat.Controls.Add(this.txtSommeMaximumModif);
-            this.pnlLimiteMecenat.Controls.Add(this.btnAnnulLimiteMecenat);
-            this.pnlLimiteMecenat.Controls.Add(this.cbxAnneeModif);
-            this.pnlLimiteMecenat.Controls.Add(this.lblAnneeModif);
-            this.pnlLimiteMecenat.Controls.Add(this.btnModifLimiteMecenat);
-            this.pnlLimiteMecenat.Controls.Add(this.lblPlafondMecenatModif);
-            this.pnlLimiteMecenat.Location = new System.Drawing.Point(224, 139);
-            this.pnlLimiteMecenat.Name = "pnlLimiteMecenat";
-            this.pnlLimiteMecenat.Size = new System.Drawing.Size(446, 258);
-            this.pnlLimiteMecenat.TabIndex = 5;
-            this.pnlLimiteMecenat.Visible = false;
-            // 
-            // btnAnnulLimiteMecenat
-            // 
-            this.btnAnnulLimiteMecenat.Location = new System.Drawing.Point(240, 177);
-            this.btnAnnulLimiteMecenat.Name = "btnAnnulLimiteMecenat";
-            this.btnAnnulLimiteMecenat.Size = new System.Drawing.Size(156, 23);
-            this.btnAnnulLimiteMecenat.TabIndex = 7;
-            this.btnAnnulLimiteMecenat.Text = "Annuler la modification";
-            this.btnAnnulLimiteMecenat.UseVisualStyleBackColor = true;
-            this.btnAnnulLimiteMecenat.Click += new System.EventHandler(this.btnAnnulLimiteMecenat_Click);
-            // 
-            // btnModifLimiteMecenat
-            // 
-            this.btnModifLimiteMecenat.Location = new System.Drawing.Point(49, 177);
-            this.btnModifLimiteMecenat.Name = "btnModifLimiteMecenat";
-            this.btnModifLimiteMecenat.Size = new System.Drawing.Size(155, 23);
-            this.btnModifLimiteMecenat.TabIndex = 6;
-            this.btnModifLimiteMecenat.Text = "Enregistrer la modification";
-            this.btnModifLimiteMecenat.UseVisualStyleBackColor = true;
-            // 
-            // cbxLimiteMecenat
-            // 
-            this.cbxLimiteMecenat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxLimiteMecenat.FormattingEnabled = true;
-            this.cbxLimiteMecenat.Location = new System.Drawing.Point(445, 102);
-            this.cbxLimiteMecenat.Name = "cbxLimiteMecenat";
-            this.cbxLimiteMecenat.Size = new System.Drawing.Size(121, 21);
-            this.cbxLimiteMecenat.TabIndex = 4;
-            // 
-            // lblLimiteMecenat
-            // 
-            this.lblLimiteMecenat.AutoSize = true;
-            this.lblLimiteMecenat.Location = new System.Drawing.Point(115, 105);
-            this.lblLimiteMecenat.Name = "lblLimiteMecenat";
-            this.lblLimiteMecenat.Size = new System.Drawing.Size(313, 13);
-            this.lblLimiteMecenat.TabIndex = 3;
-            this.lblLimiteMecenat.Text = "Veuillez sélectionner la limite de mecenat à modifier pour le pays :";
             // 
             // txtSommeMaximumModif
             // 
-            this.txtSommeMaximumModif.Location = new System.Drawing.Point(221, 103);
+            this.txtSommeMaximumModif.Location = new System.Drawing.Point(398, 350);
             this.txtSommeMaximumModif.Mask = "9999.99";
             this.txtSommeMaximumModif.Name = "txtSommeMaximumModif";
             this.txtSommeMaximumModif.Size = new System.Drawing.Size(112, 20);
@@ -103,56 +50,82 @@ namespace GestionMecenatGSB
             // cbxAnneeModif
             // 
             this.cbxAnneeModif.FormattingEnabled = true;
-            this.cbxAnneeModif.Location = new System.Drawing.Point(221, 47);
+            this.cbxAnneeModif.Location = new System.Drawing.Point(398, 310);
             this.cbxAnneeModif.Name = "cbxAnneeModif";
             this.cbxAnneeModif.Size = new System.Drawing.Size(112, 21);
             this.cbxAnneeModif.TabIndex = 21;
             // 
+            // lblAnneeModif
+            // 
+            this.lblAnneeModif.AutoSize = true;
+            this.lblAnneeModif.Location = new System.Drawing.Point(253, 313);
+            this.lblAnneeModif.Name = "lblAnneeModif";
+            this.lblAnneeModif.Size = new System.Drawing.Size(109, 13);
+            this.lblAnneeModif.TabIndex = 17;
+            this.lblAnneeModif.Text = "Sélectionner l\'année :";
+            // 
+            // btnModifLimiteMecenat
+            // 
+            this.btnModifLimiteMecenat.Location = new System.Drawing.Point(338, 403);
+            this.btnModifLimiteMecenat.Name = "btnModifLimiteMecenat";
+            this.btnModifLimiteMecenat.Size = new System.Drawing.Size(155, 23);
+            this.btnModifLimiteMecenat.TabIndex = 6;
+            this.btnModifLimiteMecenat.Text = "Enregistrer la modification";
+            this.btnModifLimiteMecenat.UseVisualStyleBackColor = true;
+            // 
             // lblPlafondMecenatModif
             // 
             this.lblPlafondMecenatModif.AutoSize = true;
-            this.lblPlafondMecenatModif.Location = new System.Drawing.Point(69, 106);
+            this.lblPlafondMecenatModif.Location = new System.Drawing.Point(268, 357);
             this.lblPlafondMecenatModif.Name = "lblPlafondMecenatModif";
             this.lblPlafondMecenatModif.Size = new System.Drawing.Size(94, 13);
             this.lblPlafondMecenatModif.TabIndex = 19;
             this.lblPlafondMecenatModif.Text = "Somme maximum :";
             // 
-            // lblAnneeModif
+            // lblLimiteMecenat
             // 
-            this.lblAnneeModif.AutoSize = true;
-            this.lblAnneeModif.Location = new System.Drawing.Point(69, 47);
-            this.lblAnneeModif.Name = "lblAnneeModif";
-            this.lblAnneeModif.Size = new System.Drawing.Size(109, 13);
-            this.lblAnneeModif.TabIndex = 17;
-            this.lblAnneeModif.Text = "Sélectionner l\'année :";
+            this.lblLimiteMecenat.AutoSize = true;
+            this.lblLimiteMecenat.Location = new System.Drawing.Point(23, 30);
+            this.lblLimiteMecenat.Name = "lblLimiteMecenat";
+            this.lblLimiteMecenat.Size = new System.Drawing.Size(253, 13);
+            this.lblLimiteMecenat.TabIndex = 3;
+            this.lblLimiteMecenat.Text = "Veuillez sélectionner la limite de mecenat à modifier :";
+            // 
+            // dtgInfosLimiteMecenat
+            // 
+            this.dtgInfosLimiteMecenat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgInfosLimiteMecenat.Location = new System.Drawing.Point(12, 63);
+            this.dtgInfosLimiteMecenat.Name = "dtgInfosLimiteMecenat";
+            this.dtgInfosLimiteMecenat.Size = new System.Drawing.Size(767, 205);
+            this.dtgInfosLimiteMecenat.TabIndex = 15;
             // 
             // FormModifLimiteMecenat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pnlLimiteMecenat);
-            this.Controls.Add(this.cbxLimiteMecenat);
+            this.Controls.Add(this.txtSommeMaximumModif);
+            this.Controls.Add(this.dtgInfosLimiteMecenat);
+            this.Controls.Add(this.btnModifLimiteMecenat);
+            this.Controls.Add(this.lblPlafondMecenatModif);
+            this.Controls.Add(this.cbxAnneeModif);
             this.Controls.Add(this.lblLimiteMecenat);
+            this.Controls.Add(this.lblAnneeModif);
             this.Name = "FormModifLimiteMecenat";
             this.Text = "FormModifLimiteMecenat";
-            this.pnlLimiteMecenat.ResumeLayout(false);
-            this.pnlLimiteMecenat.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgInfosLimiteMecenat)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel pnlLimiteMecenat;
-        private System.Windows.Forms.Button btnAnnulLimiteMecenat;
         private System.Windows.Forms.Button btnModifLimiteMecenat;
-        private System.Windows.Forms.ComboBox cbxLimiteMecenat;
         private System.Windows.Forms.Label lblLimiteMecenat;
         private System.Windows.Forms.MaskedTextBox txtSommeMaximumModif;
         private System.Windows.Forms.ComboBox cbxAnneeModif;
         private System.Windows.Forms.Label lblAnneeModif;
         private System.Windows.Forms.Label lblPlafondMecenatModif;
+        private System.Windows.Forms.DataGridView dtgInfosLimiteMecenat;
     }
 }
