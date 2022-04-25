@@ -25,7 +25,8 @@ namespace GestionMecenatGSB
 
         private void partenariatsToolStripMenuItem2_Click(object sender, EventArgs e)//Consultation des partenariats
         {
-            
+            FormConsultPartenariat lePartenariatConsult = new FormConsultPartenariat();
+            lePartenariatConsult.Show();
         }
 
         private void associationsToolStripMenuItem_Click(object sender, EventArgs e)//Ajout d'une association

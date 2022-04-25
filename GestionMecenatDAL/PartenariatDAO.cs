@@ -57,7 +57,7 @@ namespace GestionMecenatDAL
 
                 lesPartenariats.Add(new Partenariat(IDPartenariat, budgetPrevisionnel, coutPartenariat, uneActionMenee, uneAssociationLiee));
             }
-
+          
             // on ferme le DataReader
 
             monLecteur.Close();
