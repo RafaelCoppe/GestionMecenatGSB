@@ -1,4 +1,5 @@
 ﻿using GestionMecenatBLL;
+using GestionMecenatBO;
 using GestionMecenatDAL;
 using System;
 using System.Collections.Generic;
@@ -31,11 +32,28 @@ namespace GestionMecenatGSB
             cbxModifAssoc.DataSource = AssociationManager.GetInstance().GetAssociations();
         }
 
-        //private void cbxModifAssoc_SelectionChangeCommitted(object sender, EventArgs e)
-        //{
-        //    int idAssoc = (int)cbxModifAssoc.SelectedValue;
-        //    AssociationDAO uneAssociation = AssociationManager.GetInstance().CreerAssociation();
+        private void cbxModifAssoc_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            int idAssoc = (int)cbxModifAssoc.SelectedValue;
+            Association uneAssociation = AssociationManager.GetInstance().RecupererAssociation(idAssoc);
 
-        //}
+            txtBoxModifNom.Text = uneAssociation.NomAssociation;
+            txtModifResp.Text = uneAssociation.NomResponsbale;
+        }
+
+        private void btnModifAssoc_Click(object sender, EventArgs e)
+        {
+            Mission laMission = new Mission((int)cbxModifMission.SelectedValue, cbxModifMission.SelectedText);
+            Pays lePays = new Pays((int)cbxModifPays.SelectedValue, cbxModifPays.SelectedText);
+            try
+            {
+                int idAssoc = (int)cbxModifAssoc.SelectedValue;
+                AssociationManager.GetInstance().ModifAssociation(txtBoxModifNom.Text, txtModifResp.Text, lePays.Id, laMission.Id);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

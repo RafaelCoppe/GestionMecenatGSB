@@ -135,20 +135,64 @@ namespace GestionMecenatDAL
             return nb;
         }
 
-        //public Association RecupererAssociation(int id)
-        //{
-        //    string nomAssociation;
-        //    string nomResponsable;
-        //    Mission laMission;
-        //    Pays lePays;
+        public Association RecupererAssociation(int id)
+        {
 
-        //    SqlCommand commande = Commande.GetObjCommande();
-        //    commande.Parameters.Clear();
-        //    commande.CommandText = "SELECT id, nomAssoc, nom Resp, id_payss, id_mission FROM association WHERE id = @id"; 
+            string nomAssociation;
+            string nomResponsable;
+            Mission laMission;
+            Pays lePays;
 
-        //    commande.Parameters.Add("Id", System.Data.SqlDbType.Int);
-        //    commande.Parameters["Id"].Value = id;
+            SqlCommand commande = Commande.GetObjCommande();
+            commande.Parameters.Clear();
+            commande.CommandText = "SELECT id, nomAssoc, nomResp, id_pays, id_mission FROM association WHERE id = @id";
 
-        //}
+            commande.Parameters.Add("Id", System.Data.SqlDbType.Int);
+            commande.Parameters["Id"].Value = id;
+
+            SqlDataReader reader;
+            reader = commande.ExecuteReader();
+            reader.Read();
+            id = (int)reader["id"];
+
+            if (reader["nomAssoc"] == DBNull.Value)
+            {
+                nomAssociation = default(string);
+            }
+            else
+            {
+                nomAssociation = reader["nomAssoc"].ToString();
+            }
+
+            if (reader["nomResp"] == DBNull.Value)
+            {
+                nomResponsable = default(string);
+            }
+            else
+            {
+                nomResponsable = reader["nomResp"].ToString();
+            }
+
+            if (reader["id_pays"] == DBNull.Value)
+            {
+                lePays = default(Pays);
+            }
+            else
+            {
+                lePays = (Pays)reader["id_pays"];
+            }
+
+            if (reader["id_mission"] == DBNull.Value)
+            {
+                laMission = default(Mission);
+            }
+            else
+            {
+                laMission = (Mission)reader["idCategCi"];
+            }
+            commande.Connection.Close();
+            return new Association(id, nomAssociation, nomResponsable, laMission, lePays);
+
+        }
     }
 }
