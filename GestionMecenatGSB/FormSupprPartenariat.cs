@@ -17,6 +17,12 @@ namespace GestionMecenatGSB
         {
             InitializeComponent();
             majCbx();
+
+            dtgPartenariatChoisi.Columns.Add("id", "ID");
+            dtgPartenariatChoisi.Columns.Add("budgetPrevisionnel", "Budget Prévisionnel");
+            dtgPartenariatChoisi.Columns.Add("coutPartenariat", "Cout du partenariat");
+            dtgPartenariatChoisi.Columns.Add("Action menée", "Action menée");
+            dtgPartenariatChoisi.Columns.Add("Association liée", "Association liée");
         }
 
         private void majCbx() //Mise à jour des deux combobox
@@ -30,7 +36,11 @@ namespace GestionMecenatGSB
 
         private void dtgPartenariats_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            dtgPartenariatChoisi.DataSource = PartenariatManager.GetInstance().GetLePartenariat((int)dtgPartenariats.Rows[e.RowIndex].Cells[0].Value);
+            dtgPartenariatChoisi.Rows[0].Cells[0].Value = dtgPartenariats.Rows[e.RowIndex].Cells[0].Value;
+            dtgPartenariatChoisi.Rows[0].Cells[1].Value = dtgPartenariats.Rows[e.RowIndex].Cells[1].Value;
+            dtgPartenariatChoisi.Rows[0].Cells[2].Value = dtgPartenariats.Rows[e.RowIndex].Cells[2].Value;
+            dtgPartenariatChoisi.Rows[0].Cells[3].Value = dtgPartenariats.Rows[e.RowIndex].Cells[5].Value;
+            dtgPartenariatChoisi.Rows[0].Cells[4].Value = dtgPartenariats.Rows[e.RowIndex].Cells[6].Value;
         }
     }
 

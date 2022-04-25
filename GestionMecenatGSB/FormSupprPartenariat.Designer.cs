@@ -48,9 +48,9 @@ namespace GestionMecenatGSB
             // 
             // btnSuppr
             // 
-            this.btnSuppr.Location = new System.Drawing.Point(551, 387);
+            this.btnSuppr.Location = new System.Drawing.Point(631, 363);
             this.btnSuppr.Name = "btnSuppr";
-            this.btnSuppr.Size = new System.Drawing.Size(237, 51);
+            this.btnSuppr.Size = new System.Drawing.Size(157, 64);
             this.btnSuppr.TabIndex = 1;
             this.btnSuppr.Text = "Supprimer le partenariat";
             this.btnSuppr.UseVisualStyleBackColor = true;
@@ -58,7 +58,7 @@ namespace GestionMecenatGSB
             // lblPartenariatChoisi
             // 
             this.lblPartenariatChoisi.AutoSize = true;
-            this.lblPartenariatChoisi.Location = new System.Drawing.Point(9, 355);
+            this.lblPartenariatChoisi.Location = new System.Drawing.Point(9, 335);
             this.lblPartenariatChoisi.Name = "lblPartenariatChoisi";
             this.lblPartenariatChoisi.Size = new System.Drawing.Size(94, 13);
             this.lblPartenariatChoisi.TabIndex = 2;
@@ -67,9 +67,9 @@ namespace GestionMecenatGSB
             // dtgPartenariatChoisi
             // 
             this.dtgPartenariatChoisi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgPartenariatChoisi.Location = new System.Drawing.Point(12, 387);
+            this.dtgPartenariatChoisi.Location = new System.Drawing.Point(12, 363);
             this.dtgPartenariatChoisi.Name = "dtgPartenariatChoisi";
-            this.dtgPartenariatChoisi.Size = new System.Drawing.Size(491, 51);
+            this.dtgPartenariatChoisi.Size = new System.Drawing.Size(587, 64);
             this.dtgPartenariatChoisi.TabIndex = 3;
             // 
             // FormSupprPartenariat
