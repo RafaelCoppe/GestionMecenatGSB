@@ -132,6 +132,7 @@ namespace GestionMecenatGSB
             this.iToolStripMenuItem.Name = "iToolStripMenuItem";
             this.iToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.iToolStripMenuItem.Text = "Partenariats";
+            this.iToolStripMenuItem.Click += new System.EventHandler(this.iToolStripMenuItem_Click);
             // 
             // menuDesSuppressionsToolStripMenuItem
             // 

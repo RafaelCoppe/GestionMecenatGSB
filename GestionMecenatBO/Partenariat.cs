@@ -43,6 +43,9 @@ namespace GestionMecenatBO
         public string LibelleActionMenee { get => ActionMennee.Libelle; }
         public string LibelleAssociationLiee { get => AssociationLiee.NomAssociation; }
 
+        public string NomActionMenee { get => actionMennee.Libelle;}
+        public string NomAssociationLiee { get => associationLiee.NomAssociation;}
+
         //Constructeur avec id
         public Partenariat(int id, decimal budgetPrevisionnel, decimal coutPartenariat, ActionMenee actionMennee, Association uneAssociation)
         {
@@ -65,13 +68,15 @@ namespace GestionMecenatBO
         }
 
         //Constructeur avec un id à la place des objets ActionMenee et Association
-        public Partenariat(decimal budgetPrevisionnel, decimal coutPartenariat, int actionMennee, int uneAssociation)
+        public Partenariat(int id, decimal budgetPrevisionnel, decimal coutPartenariat, int idActionMennee, int idAssociation)
         {
+            this.id = id;
+
             this.budgetPrevisionnel = budgetPrevisionnel;
             this.coutPartenariat = coutPartenariat;
 
-            this.idActionMennee = actionMennee;
-            this.idAssociationLiee = uneAssociation;
+            this.idActionMennee = idActionMennee;
+            this.idAssociationLiee = idAssociation;
         }
     }
 }

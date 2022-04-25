@@ -57,7 +57,7 @@ namespace GestionMecenatDAL
 
                 lesPartenariats.Add(new Partenariat(IDPartenariat, budgetPrevisionnel, coutPartenariat, uneActionMenee, uneAssociationLiee));
             }
-            
+          
             // on ferme le DataReader
 
             monLecteur.Close();
@@ -99,6 +99,40 @@ namespace GestionMecenatDAL
 
             // on retourne le nombre d'enregistrements ajoutés
             return nbEnregAjout;
+        }
+
+        public int ModifPartenariat(Partenariat lePartenariatModifie)
+        {
+            int nbEnregModif;
+
+            // on crée l'objet qui va contenir le nom de la procédure stockée utilisée
+
+            SqlCommand maCommand = Commande.GetObjCommande();
+
+            //Création des paramètres
+            maCommand.Parameters.Add("idPartenariatChoisi", System.Data.SqlDbType.Int);
+            maCommand.Parameters.Add("budgetPrevu", System.Data.SqlDbType.Decimal);
+            maCommand.Parameters.Add("coutReel", System.Data.SqlDbType.Decimal);
+            maCommand.Parameters.Add("idActionMenee", System.Data.SqlDbType.Int);
+            maCommand.Parameters.Add("idAssoLiee", System.Data.SqlDbType.Int);
+
+            maCommand.Parameters["idPartenariatChoisi"].Value = lePartenariatModifie.Id;
+            maCommand.Parameters["budgetPrevu"].Value = lePartenariatModifie.BudgetPrevisionnel;
+            maCommand.Parameters["coutReel"].Value = lePartenariatModifie.CoutPartenariat;
+            maCommand.Parameters["idActionMenee"].Value = lePartenariatModifie.ActionMennee.Id;
+            maCommand.Parameters["idAssoLiee"].Value = lePartenariatModifie.AssociationLiee.Id;
+
+            //Stocker le nom de la procédure stockée dans la commande
+            maCommand.CommandText = "ModifPartenariat";
+
+            // on exécute la requête
+            nbEnregModif = maCommand.ExecuteNonQuery();
+
+            //On ferme la connexion
+            maCommand.Connection.Close();
+
+            // on retourne le nombre d'enregistrements ajoutés
+            return nbEnregModif;
         }
 
     }
