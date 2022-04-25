@@ -56,10 +56,10 @@ namespace GestionMecenatGSB
             {
             decimal budgetPrev = decimal.Parse(txtBudgetPrev.Text);
             decimal coutReel = decimal.Parse(txtCoutReel.Text);
-            int idActionMenee = (int)cbxActionMenee.SelectedValue;
-            int idAssoLiee = (int)cbxAssoLiee.SelectedValue;
+            ActionMenee newActionMenee = new ActionMenee((int)cbxActionMenee.SelectedValue, cbxActionMenee.SelectedText);
+            Association newAssoLiee = new Association((int)cbxAssoLiee.SelectedValue, cbxAssoLiee.SelectedText);
 
-            int nb = PartenariatManager.GetInstance().ModifPartenariat(idPartenariatChoisi, budgetPrev, coutReel, idActionMenee, idAssoLiee);
+            int nb = PartenariatManager.GetInstance().ModifPartenariat(idPartenariatChoisi, budgetPrev, coutReel, newActionMenee, newAssoLiee);
             }
             
         }
