@@ -179,6 +179,7 @@ namespace GestionMecenatGSB
             this.associationsToolStripMenuItem3.Name = "associationsToolStripMenuItem3";
             this.associationsToolStripMenuItem3.Size = new System.Drawing.Size(177, 22);
             this.associationsToolStripMenuItem3.Text = "Associations";
+            this.associationsToolStripMenuItem3.Click += new System.EventHandler(this.associationsToolStripMenuItem3_Click);
             // 
             // actionsToolStripMenuItem2
             // 
