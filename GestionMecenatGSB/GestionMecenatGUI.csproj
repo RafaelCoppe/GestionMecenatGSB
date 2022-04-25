@@ -70,11 +70,29 @@
     <Compile Include="FormConsultAssoc.Designer.cs">
       <DependentUpon>FormConsultAssoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormConsultPartenariat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsultPartenariat.Designer.cs">
+      <DependentUpon>FormConsultPartenariat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConsultLimiteMecenat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsultLimiteMecenat.Designer.cs">
+      <DependentUpon>FormConsultLimiteMecenat.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMenu.Designer.cs">
       <DependentUpon>FormMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormModifPartenariats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModifPartenariats.Designer.cs">
+      <DependentUpon>FormModifPartenariats.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -90,8 +108,17 @@
     <EmbeddedResource Include="FormConsultAssoc.resx">
       <DependentUpon>FormConsultAssoc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultPartenariat.resx">
+      <DependentUpon>FormConsultPartenariat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultLimiteMecenat.resx">
+      <DependentUpon>FormConsultLimiteMecenat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModifPartenariats.resx">
+      <DependentUpon>FormModifPartenariats.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

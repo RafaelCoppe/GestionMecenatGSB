@@ -37,6 +37,7 @@ namespace GestionMecenatGSB.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=\"tcp:301P10, 49172\";Initial Catalog=Mécénat;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=301P10\\SQLEXPRESS;Initial Catalog=Mécénat;Integrated Security=True")]
         public string MécénatConnectionString {
             get {
                 return ((string)(this["MécénatConnectionString"]));

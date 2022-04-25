@@ -25,7 +25,8 @@ namespace GestionMecenatGSB
 
         private void partenariatsToolStripMenuItem2_Click(object sender, EventArgs e)//Consultation des partenariats
         {
-            
+            FormConsultPartenariat lePartenariatConsult = new FormConsultPartenariat();
+            lePartenariatConsult.Show();
         }
 
         private void associationsToolStripMenuItem_Click(object sender, EventArgs e)//Ajout d'une association
@@ -44,6 +45,16 @@ namespace GestionMecenatGSB
         {
             FormConsultAssoc leFormConsultAssoc = new FormConsultAssoc();
             leFormConsultAssoc.Show();
+        private void limiteDeMécénatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormConsultLimiteMecenat laLimiteMecenatConsult = new FormConsultLimiteMecenat();
+            laLimiteMecenatConsult.Show();
+        }
+
+        private void iToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormModifPartenariats lePartenariatModif = new FormModifPartenariats();
+            lePartenariatModif.Show();
         }
     }
 }

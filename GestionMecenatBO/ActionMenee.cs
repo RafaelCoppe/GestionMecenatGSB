@@ -37,5 +37,10 @@ namespace GestionMecenatBO
         {
             this.libelle = libelle;
         }
+
+        public ActionMenee(int id)
+        {
+            this.id = id;
+        }
     }
 }
