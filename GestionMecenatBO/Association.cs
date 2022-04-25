@@ -29,7 +29,7 @@ namespace GestionMecenatBO
             this.lePays = lePays;
         }
 
-        public Association(int id, object nomAssociation)
+        public Association(int id)
         {
             this.id = id;
         }

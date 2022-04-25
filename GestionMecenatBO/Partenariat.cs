@@ -30,7 +30,8 @@ namespace GestionMecenatBO
         private decimal coutPartenariat;
         private ActionMenee actionMennee;
         private Association associationLiee;
-        
+        private string libelleActionMenee;
+        private string libelleAssociationLiee;
 
         //Accesseurs en lecture et en écriture
         public int Id { get => id; set => id = value; }
@@ -39,6 +40,8 @@ namespace GestionMecenatBO
 
         public ActionMenee ActionMennee { get => actionMennee; set => actionMennee = value; }
         public Association AssociationLiee { get => associationLiee; set => associationLiee = value; }
+        public string LibelleActionMenee { get => ActionMennee.Libelle; }
+        public string LibelleAssociationLiee { get => AssociationLiee.NomAssociation; }
 
         public string NomActionMenee { get => actionMennee.Libelle;}
         public string NomAssociationLiee { get => associationLiee.NomAssociation;}
