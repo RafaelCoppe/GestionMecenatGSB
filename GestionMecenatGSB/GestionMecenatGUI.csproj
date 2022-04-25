@@ -94,6 +94,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormConsultPartenariat.resx">
       <DependentUpon>FormConsultPartenariat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormConsultLimiteMecenat.resx">
       <DependentUpon>FormConsultLimiteMecenat.cs</DependentUpon>
     </EmbeddedResource>
