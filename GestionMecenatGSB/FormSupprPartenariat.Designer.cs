@@ -54,6 +54,7 @@ namespace GestionMecenatGSB
             this.btnSuppr.TabIndex = 1;
             this.btnSuppr.Text = "Supprimer le partenariat";
             this.btnSuppr.UseVisualStyleBackColor = true;
+            this.btnSuppr.Click += new System.EventHandler(this.btnSuppr_Click);
             // 
             // lblPartenariatChoisi
             // 

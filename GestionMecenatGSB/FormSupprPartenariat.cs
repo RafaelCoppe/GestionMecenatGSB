@@ -32,6 +32,12 @@ namespace GestionMecenatGSB
             dtgPartenariats.Columns[4].Visible = false;
             dtgPartenariats.Columns[7].Visible = false;
             dtgPartenariats.Columns[8].Visible = false;
+
+            dtgPartenariatChoisi.Rows[0].Cells[0].Value = 
+            dtgPartenariatChoisi.Rows[0].Cells[1].Value = 
+            dtgPartenariatChoisi.Rows[0].Cells[2].Value = 
+            dtgPartenariatChoisi.Rows[0].Cells[3].Value = 
+            dtgPartenariatChoisi.Rows[0].Cells[4].Value = 
         }
 
         private void dtgPartenariats_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -41,6 +47,11 @@ namespace GestionMecenatGSB
             dtgPartenariatChoisi.Rows[0].Cells[2].Value = dtgPartenariats.Rows[e.RowIndex].Cells[2].Value;
             dtgPartenariatChoisi.Rows[0].Cells[3].Value = dtgPartenariats.Rows[e.RowIndex].Cells[5].Value;
             dtgPartenariatChoisi.Rows[0].Cells[4].Value = dtgPartenariats.Rows[e.RowIndex].Cells[6].Value;
+        }
+
+        private void btnSuppr_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
