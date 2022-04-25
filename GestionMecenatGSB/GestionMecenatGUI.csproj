@@ -64,6 +64,12 @@
     <Compile Include="FormAjoutPartenariat.Designer.cs">
       <DependentUpon>FormAjoutPartenariat.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormConsultAssoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsultAssoc.Designer.cs">
+      <DependentUpon>FormConsultAssoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormConsultPartenariat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAjoutPartenariat.resx">
       <DependentUpon>FormAjoutPartenariat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultAssoc.resx">
+      <DependentUpon>FormConsultAssoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormConsultPartenariat.resx">
       <DependentUpon>FormConsultPartenariat.cs</DependentUpon>
