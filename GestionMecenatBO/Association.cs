@@ -41,6 +41,7 @@ namespace GestionMecenatBO
             this.laMission = laMission;
             this.lePays = lePays;
         }
+
     }
 
 }
