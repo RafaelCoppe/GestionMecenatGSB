@@ -65,15 +65,15 @@ namespace GestionMecenatBO
         }
 
         //Constructeur avec un id à la place des objets ActionMenee et Association
-        public Partenariat(int id, decimal budgetPrevisionnel, decimal coutPartenariat, int actionMennee, int uneAssociation)
+        public Partenariat(int id, decimal budgetPrevisionnel, decimal coutPartenariat, int idActionMennee, int idAssociation)
         {
             this.id = id;
 
             this.budgetPrevisionnel = budgetPrevisionnel;
             this.coutPartenariat = coutPartenariat;
 
-            this.idActionMennee = actionMennee;
-            this.idAssociationLiee = uneAssociation;
+            this.idActionMennee = idActionMennee;
+            this.idAssociationLiee = idAssociation;
         }
     }
 }
