@@ -25,6 +25,51 @@ namespace GestionMecenatDAL
         {
         }
 
+        public List<Partenariat> GetPartenariats()
+        {
+            SqlCommand maCommand = Commande.GetObjCommande();
+            int IDPartenariat;
+            decimal budgetPrevisionnel;
+            decimal coutPartenariat;
+            //int idAction;
+            //int idAssociation;
+            ActionMenee uneActionMenee;
+            Association uneAssociationLiee;
+
+            // on crée la collection lesärtenariats de type List<Partenariat> qui va contenir les
+            // caractéristiques des partenariats enregistrés dans la base de donnes
+            List<Partenariat> lesPartenariats = new List<Partenariat>();
+
+            // on exécute la requête et on récupère dans un DataReader les enregistrements
+            maCommand.CommandText = "GetLesPartenariats";
+            SqlDataReader monLecteur = maCommand.ExecuteReader();
+
+            // pour chaque enregistrement du DataReader on crée un objet instance de
+            // Partenariat que l'on ajoute dans la collection lesPartenariats
+
+            while (monLecteur.Read())
+            {
+                IDPartenariat = (int)monLecteur["id"];
+                budgetPrevisionnel = decimal.Parse(monLecteur["budgetPrevisionnel"].ToString());
+                coutPartenariat = decimal.Parse(monLecteur["coutPartenariat"].ToString());
+                uneActionMenee = new ActionMenee((int)monLecteur["id_actionMenee"], monLecteur["nomAction"].ToString());
+                uneAssociationLiee = new Association((int)monLecteur["id_association"], monLecteur["nomAsso"].ToString(), monLecteur["nomResponsable"].ToString(), new Mission((int)monLecteur["id_mission"]), new Pays((int)monLecteur["idPays"], monLecteur["nomPays"].ToString()));
+
+                lesPartenariats.Add(new Partenariat(IDPartenariat, budgetPrevisionnel, coutPartenariat, uneActionMenee, uneAssociationLiee));
+            }
+            
+            // on ferme le DataReader
+
+            monLecteur.Close();
+
+            // on ferme la connexion
+
+            maCommand.Connection.Close();
+
+            // on retourne la collection
+            return lesPartenariats;
+        }
+
         public int AjoutPartenariat(Partenariat unPartenariat) //Méthode qui ajoute un partenariat dans la table
         {
             int nbEnregAjout;
