@@ -36,7 +36,7 @@ namespace GestionMecenatGSB
             // dtgConsultLimiteMecenat
             // 
             this.dtgConsultLimiteMecenat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgConsultLimiteMecenat.Location = new System.Drawing.Point(127, 30);
+            this.dtgConsultLimiteMecenat.Location = new System.Drawing.Point(12, 12);
             this.dtgConsultLimiteMecenat.Name = "dtgConsultLimiteMecenat";
             this.dtgConsultLimiteMecenat.Size = new System.Drawing.Size(562, 338);
             this.dtgConsultLimiteMecenat.TabIndex = 0;

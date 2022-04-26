@@ -20,6 +20,7 @@ namespace GestionMecenatGSB
 
             dtgConsultLimiteMecenat.Columns[1].Visible = false;
             dtgConsultLimiteMecenat.Columns[2].Visible = false;
+            dtgConsultLimiteMecenat.Columns[5].Visible = false;
 
             dtgConsultLimiteMecenat.Columns[0].HeaderText = "Plafond de mécénat";
             dtgConsultLimiteMecenat.Columns[3].HeaderText = "Année";

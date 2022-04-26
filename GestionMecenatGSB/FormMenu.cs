@@ -52,5 +52,11 @@ namespace GestionMecenatGSB
             FormModifPartenariats lePartenariatModif = new FormModifPartenariats();
             lePartenariatModif.Show();
         }
+
+        private void limitesDeMécénatToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FormModifLimiteMecenat laLimiteMecenatModif = new FormModifLimiteMecenat();
+            laLimiteMecenatModif.Show();
+        }
     }
 }
