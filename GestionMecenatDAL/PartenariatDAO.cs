@@ -135,5 +135,31 @@ namespace GestionMecenatDAL
             return nbEnregModif;
         }
 
+        public int SupprPartenariat(Partenariat lePartenariatSupprime)
+        {
+            int nbEnregModif;
+
+            // on crée l'objet qui va contenir le nom de la procédure stockée utilisée
+
+            SqlCommand maCommand = Commande.GetObjCommande();
+
+            //Création des paramètres
+            maCommand.Parameters.Add("idPartenariatChoisi", System.Data.SqlDbType.Int);
+
+            maCommand.Parameters["idPartenariatChoisi"].Value = lePartenariatSupprime.Id;
+
+            //Stocker le nom de la procédure stockée dans la commande
+            maCommand.CommandText = "SupprPartenariat";
+
+            // on exécute la requête
+            nbEnregModif = maCommand.ExecuteNonQuery();
+
+            //On ferme la connexion
+            maCommand.Connection.Close();
+
+            // on retourne le nombre d'enregistrements ajoutés
+            return nbEnregModif;
+        }
+
     }
 }

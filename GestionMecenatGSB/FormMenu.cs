@@ -57,5 +57,11 @@ namespace GestionMecenatGSB
             FormModifPartenariats lePartenariatModif = new FormModifPartenariats();
             lePartenariatModif.Show();
         }
+
+        private void partenariatsToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FormSupprPartenariat lePartenariatSuppr = new FormSupprPartenariat();
+            lePartenariatSuppr.Show();
+        }
     }
 }
