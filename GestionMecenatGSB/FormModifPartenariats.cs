@@ -26,8 +26,6 @@ namespace GestionMecenatGSB
             dtgPartenariats.DataSource = PartenariatManager.GetInstance().GetLesPartenariats();
             dtgPartenariats.Columns[3].Visible = false;
             dtgPartenariats.Columns[4].Visible = false;
-            dtgPartenariats.Columns[7].Visible = false;
-            dtgPartenariats.Columns[8].Visible = false;
 
             cbxActionMenee.DisplayMember = "libelle";
             cbxActionMenee.ValueMember = "id";
