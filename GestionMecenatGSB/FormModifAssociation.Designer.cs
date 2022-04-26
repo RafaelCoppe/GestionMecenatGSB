@@ -133,6 +133,7 @@ namespace GestionMecenatGSB
             this.btnModifAssoc.TabIndex = 10;
             this.btnModifAssoc.Text = "Modifier l\'association";
             this.btnModifAssoc.UseVisualStyleBackColor = true;
+            this.btnModifAssoc.Click += new System.EventHandler(this.btnModifAssoc_Click);
             // 
             // FormModifAssociation
             // 

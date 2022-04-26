@@ -17,7 +17,7 @@ namespace GestionMecenatDAL
         {
             SqlConnection objConnex = new SqlConnection();
             objCommand = new SqlCommand("", objConnex);
-            objConnex.ConnectionString = ConfigurationManager.ConnectionStrings["Mecenat"].ConnectionString;
+            objConnex.ConnectionString = ConfigurationManager.ConnectionStrings["Mécénat"].ConnectionString;
         }
 
         public static SqlCommand GetObjCommande()

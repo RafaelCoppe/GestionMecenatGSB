@@ -133,6 +133,7 @@ namespace GestionMecenatDAL
             int nb = commande.ExecuteNonQuery();
             commande.Connection.Close();
             return nb;
+
         }
 
         public Association RecupererAssociation(int id)

@@ -49,6 +49,7 @@ namespace GestionMecenatGSB
             {
                 int idAssoc = (int)cbxModifAssoc.SelectedValue;
                 AssociationManager.GetInstance().ModifAssociation(txtBoxModifNom.Text, txtModifResp.Text, lePays.Id, laMission.Id);
+                MessageBox.Show("L'association a bien été modifié");
             }
             catch (Exception exception)
             {
