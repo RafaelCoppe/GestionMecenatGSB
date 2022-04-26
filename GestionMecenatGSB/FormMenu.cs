@@ -23,11 +23,6 @@ namespace GestionMecenatGSB
             lePartenariatAjout.Show();
         }
 
-        private void partenariatsToolStripMenuItem2_Click(object sender, EventArgs e)//Consultation des partenariats
-        {
-            FormConsultPartenariat lePartenariatConsult = new FormConsultPartenariat();
-            lePartenariatConsult.Show();
-        }
 
         private void associationsToolStripMenuItem_Click(object sender, EventArgs e)//Ajout d'une association
         {
@@ -62,6 +57,18 @@ namespace GestionMecenatGSB
         {
             FormSupprPartenariat lePartenariatSuppr = new FormSupprPartenariat();
             lePartenariatSuppr.Show();
+        }
+
+        private void tousLesPartenariatsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormConsultPartenariat lePartenariatConsult = new FormConsultPartenariat();
+            lePartenariatConsult.Show();
+        }
+
+        private void selonLactionMenéeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormConsultPartenariatParAction lePartenariatConsultParAction = new FormConsultPartenariatParAction();
+            lePartenariatConsultParAction.Show();
         }
     }
 }

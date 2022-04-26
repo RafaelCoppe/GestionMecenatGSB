@@ -50,6 +50,8 @@ namespace GestionMecenatGSB
             this.actionsToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.partenariatsToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.limiteDeMécénatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tousLesPartenariatsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.selonLactionMenéeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -154,26 +156,26 @@ namespace GestionMecenatGSB
             // associationsToolStripMenuItem2
             // 
             this.associationsToolStripMenuItem2.Name = "associationsToolStripMenuItem2";
-            this.associationsToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.associationsToolStripMenuItem2.Size = new System.Drawing.Size(177, 22);
             this.associationsToolStripMenuItem2.Text = "Associations";
             // 
             // missionsToolStripMenuItem
             // 
             this.missionsToolStripMenuItem.Name = "missionsToolStripMenuItem";
-            this.missionsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.missionsToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.missionsToolStripMenuItem.Text = "Actions";
             // 
             // partenariatsToolStripMenuItem1
             // 
             this.partenariatsToolStripMenuItem1.Name = "partenariatsToolStripMenuItem1";
-            this.partenariatsToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.partenariatsToolStripMenuItem1.Size = new System.Drawing.Size(177, 22);
             this.partenariatsToolStripMenuItem1.Text = "Partenariats";
             this.partenariatsToolStripMenuItem1.Click += new System.EventHandler(this.partenariatsToolStripMenuItem1_Click);
             // 
             // limitesDeMécénatToolStripMenuItem2
             // 
             this.limitesDeMécénatToolStripMenuItem2.Name = "limitesDeMécénatToolStripMenuItem2";
-            this.limitesDeMécénatToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.limitesDeMécénatToolStripMenuItem2.Size = new System.Drawing.Size(177, 22);
             this.limitesDeMécénatToolStripMenuItem2.Text = "Limites de mécénat";
             // 
             // menuDesConsultationsToolStripMenuItem
@@ -190,29 +192,45 @@ namespace GestionMecenatGSB
             // associationsToolStripMenuItem3
             // 
             this.associationsToolStripMenuItem3.Name = "associationsToolStripMenuItem3";
-            this.associationsToolStripMenuItem3.Size = new System.Drawing.Size(177, 22);
+            this.associationsToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
             this.associationsToolStripMenuItem3.Text = "Associations";
             this.associationsToolStripMenuItem3.Click += new System.EventHandler(this.associationsToolStripMenuItem3_Click);
             // 
             // actionsToolStripMenuItem2
             // 
             this.actionsToolStripMenuItem2.Name = "actionsToolStripMenuItem2";
-            this.actionsToolStripMenuItem2.Size = new System.Drawing.Size(177, 22);
+            this.actionsToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.actionsToolStripMenuItem2.Text = "Actions";
             // 
             // partenariatsToolStripMenuItem2
             // 
+            this.partenariatsToolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tousLesPartenariatsToolStripMenuItem,
+            this.selonLactionMenéeToolStripMenuItem});
             this.partenariatsToolStripMenuItem2.Name = "partenariatsToolStripMenuItem2";
-            this.partenariatsToolStripMenuItem2.Size = new System.Drawing.Size(177, 22);
+            this.partenariatsToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.partenariatsToolStripMenuItem2.Text = "Partenariats";
-            this.partenariatsToolStripMenuItem2.Click += new System.EventHandler(this.partenariatsToolStripMenuItem2_Click);
             // 
             // limiteDeMécénatToolStripMenuItem
             // 
             this.limiteDeMécénatToolStripMenuItem.Name = "limiteDeMécénatToolStripMenuItem";
-            this.limiteDeMécénatToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.limiteDeMécénatToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.limiteDeMécénatToolStripMenuItem.Text = "Limites de mécénat";
             this.limiteDeMécénatToolStripMenuItem.Click += new System.EventHandler(this.limiteDeMécénatToolStripMenuItem_Click);
+            // 
+            // tousLesPartenariatsToolStripMenuItem
+            // 
+            this.tousLesPartenariatsToolStripMenuItem.Name = "tousLesPartenariatsToolStripMenuItem";
+            this.tousLesPartenariatsToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.tousLesPartenariatsToolStripMenuItem.Text = "Tous les partenariats";
+            this.tousLesPartenariatsToolStripMenuItem.Click += new System.EventHandler(this.tousLesPartenariatsToolStripMenuItem_Click);
+            // 
+            // selonLactionMenéeToolStripMenuItem
+            // 
+            this.selonLactionMenéeToolStripMenuItem.Name = "selonLactionMenéeToolStripMenuItem";
+            this.selonLactionMenéeToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.selonLactionMenéeToolStripMenuItem.Text = "Selon l\'action menée";
+            this.selonLactionMenéeToolStripMenuItem.Click += new System.EventHandler(this.selonLactionMenéeToolStripMenuItem_Click);
             // 
             // FormMenu
             // 
@@ -253,6 +271,8 @@ namespace GestionMecenatGSB
         private System.Windows.Forms.ToolStripMenuItem limiteDeMécénatToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem limitesDeMécénatToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem limitesDeMécénatToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem tousLesPartenariatsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem selonLactionMenéeToolStripMenuItem;
     }
 }
 
