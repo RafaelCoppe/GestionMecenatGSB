@@ -37,9 +37,9 @@ namespace GestionMecenatGSB
             this.lblBudgetPrev = new System.Windows.Forms.Label();
             this.cbxActionMenee = new System.Windows.Forms.ComboBox();
             this.cbxAssoLiee = new System.Windows.Forms.ComboBox();
-            this.txtCoutReel = new System.Windows.Forms.TextBox();
-            this.txtBudgetPrev = new System.Windows.Forms.TextBox();
             this.dtgPartenariats = new System.Windows.Forms.DataGridView();
+            this.txtBudgetPrev = new System.Windows.Forms.MaskedTextBox();
+            this.txtCoutReel = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPartenariats)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,20 +115,6 @@ namespace GestionMecenatGSB
             this.cbxAssoLiee.Size = new System.Drawing.Size(202, 21);
             this.cbxAssoLiee.TabIndex = 14;
             // 
-            // txtCoutReel
-            // 
-            this.txtCoutReel.Location = new System.Drawing.Point(586, 130);
-            this.txtCoutReel.Name = "txtCoutReel";
-            this.txtCoutReel.Size = new System.Drawing.Size(202, 20);
-            this.txtCoutReel.TabIndex = 13;
-            // 
-            // txtBudgetPrev
-            // 
-            this.txtBudgetPrev.Location = new System.Drawing.Point(586, 42);
-            this.txtBudgetPrev.Name = "txtBudgetPrev";
-            this.txtBudgetPrev.Size = new System.Drawing.Size(202, 20);
-            this.txtBudgetPrev.TabIndex = 12;
-            // 
             // dtgPartenariats
             // 
             this.dtgPartenariats.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -138,11 +124,29 @@ namespace GestionMecenatGSB
             this.dtgPartenariats.TabIndex = 11;
             this.dtgPartenariats.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgPartenariats_CellContentDoubleClick);
             // 
+            // txtBudgetPrev
+            // 
+            this.txtBudgetPrev.Location = new System.Drawing.Point(586, 42);
+            this.txtBudgetPrev.Mask = "9999.99";
+            this.txtBudgetPrev.Name = "txtBudgetPrev";
+            this.txtBudgetPrev.Size = new System.Drawing.Size(202, 20);
+            this.txtBudgetPrev.TabIndex = 22;
+            // 
+            // txtCoutReel
+            // 
+            this.txtCoutReel.Location = new System.Drawing.Point(586, 130);
+            this.txtCoutReel.Mask = "9999.99";
+            this.txtCoutReel.Name = "txtCoutReel";
+            this.txtCoutReel.Size = new System.Drawing.Size(202, 20);
+            this.txtCoutReel.TabIndex = 23;
+            // 
             // FormModifPartenariats
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtCoutReel);
+            this.Controls.Add(this.txtBudgetPrev);
             this.Controls.Add(this.btnAnnuler);
             this.Controls.Add(this.btnModifier);
             this.Controls.Add(this.lblActionMenee);
@@ -151,8 +155,6 @@ namespace GestionMecenatGSB
             this.Controls.Add(this.lblBudgetPrev);
             this.Controls.Add(this.cbxActionMenee);
             this.Controls.Add(this.cbxAssoLiee);
-            this.Controls.Add(this.txtCoutReel);
-            this.Controls.Add(this.txtBudgetPrev);
             this.Controls.Add(this.dtgPartenariats);
             this.Name = "FormModifPartenariats";
             this.Text = "FormModifPartenariats";
@@ -172,8 +174,8 @@ namespace GestionMecenatGSB
         private System.Windows.Forms.Label lblBudgetPrev;
         private System.Windows.Forms.ComboBox cbxActionMenee;
         private System.Windows.Forms.ComboBox cbxAssoLiee;
-        private System.Windows.Forms.TextBox txtCoutReel;
-        private System.Windows.Forms.TextBox txtBudgetPrev;
         private System.Windows.Forms.DataGridView dtgPartenariats;
+        private System.Windows.Forms.MaskedTextBox txtBudgetPrev;
+        private System.Windows.Forms.MaskedTextBox txtCoutReel;
     }
 }
