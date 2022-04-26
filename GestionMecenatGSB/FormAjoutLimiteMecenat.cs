@@ -19,17 +19,17 @@ namespace GestionMecenatGSB
             majCbx();
         }
 
-        public void majCbx()
+        public void majCbx() //Mise à jour des deux combobox
         {
             cbxPays.DisplayMember = "libelle";
             cbxPays.ValueMember = "id";
             cbxPays.DataSource = PaysManager.GetInstance().GetLesPays(); // Récupération des Pays
         }
 
-        private void btnAjouter_Click(object sender, EventArgs e)
+        private void btnAjouter_Click(object sender, EventArgs e) //Appui sur le bouton enregistrer
         {
             int nbAjouts;
-            string msgErr = "";
+            string msgErr = "";  //Liste des erreurs
             if (cbxPays.SelectedIndex == 0)
             {
                 msgErr += ("Veuillez sélectionner un pays \n");
@@ -49,7 +49,10 @@ namespace GestionMecenatGSB
             }
             else
             {
+                //On récupère la valeur de la SommeMaximum
                 decimal SommeMaximum = decimal.Parse(txtSommeMaximum.Text);
+
+                //Appel de la méthode AjoutLimiteMecenat
                 try
                 {
                     nbAjouts = AvoirPourLimiteDeMecenatManager.GetInstance().AjoutLimiteMecenat(SommeMaximum, (int)cbxPays.SelectedValue, cbxPays.Text, (int)cbxAnnee.SelectedValue);
