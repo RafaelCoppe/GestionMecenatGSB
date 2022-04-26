@@ -46,7 +46,7 @@ namespace GestionMecenatBLL
         public int SupprPartenariat(int idPartenariatChoisi, Decimal budgetPrev, Decimal coutReel, ActionMenee newActionMenee, Association newAssoLiee)
         {
             Partenariat lePartenariatModifie = new Partenariat(idPartenariatChoisi, budgetPrev, coutReel, newActionMenee, newAssoLiee);
-            return PartenariatDAO.GetInstance().ModifPartenariat(lePartenariatModifie);
+            return PartenariatDAO.GetInstance().SupprPartenariat(lePartenariatModifie);
         }
     }
 }

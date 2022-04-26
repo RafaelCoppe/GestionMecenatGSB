@@ -45,13 +45,13 @@ namespace GestionMecenatGSB
 
         private void btnSuppr_Click(object sender, EventArgs e)
         {
-            /*int nb = PartenariatManager.GetInstance().SupprPartenariat(
+            int nb = PartenariatManager.GetInstance().SupprPartenariat(
                 (int)dtgPartenariatChoisi.Rows[0].Cells[0].Value,
                 (decimal)dtgPartenariatChoisi.Rows[0].Cells[1].Value,
                 (decimal)dtgPartenariatChoisi.Rows[0].Cells[2].Value,
                 new ActionMenee(dtgPartenariatChoisi.Rows[0].Cells[3].Value.ToString()),
                 new Association(dtgPartenariatChoisi.Rows[0].Cells[4].Value.ToString())
-                );*/
+                );
 
             majCbx();
         }
