@@ -23,6 +23,8 @@ namespace GestionMecenatGSB
             dtgAfficherPartenariats.DataSource = PartenariatManager.GetInstance().GetLesPartenariats();
             dtgAfficherPartenariats.Columns[3].Visible = false;
             dtgAfficherPartenariats.Columns[4].Visible = false;
+            dtgAfficherPartenariats.Columns[7].Visible = false;
+            dtgAfficherPartenariats.Columns[8].Visible = false;
         }
     }
 }
