@@ -40,6 +40,8 @@ namespace GestionMecenatBO
         public Association AssociationLiee { get => associationLiee; set => associationLiee = value; }
         public string LibelleActionMenee { get => ActionMennee.Libelle; }
         public string LibelleAssociationLiee { get => AssociationLiee.NomAssociation; }
+        public int IdActionMenee { get => ActionMennee.Id; }
+        public int IdAssociationLiee { get => AssociationLiee.Id; }
 
         //Constructeur avec id
         public Partenariat(int id, decimal budgetPrevisionnel, decimal coutPartenariat, ActionMenee actionMennee, Association uneAssociation)

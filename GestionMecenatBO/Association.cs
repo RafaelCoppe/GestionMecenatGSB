@@ -34,11 +34,6 @@ namespace GestionMecenatBO
             this.id = id;
         }
 
-        public Association(string nomAssociation)
-        {
-            this.nomAssociation = nomAssociation;
-        }
-
         public Association(string nomAssociation, string nomResponsable, Mission laMission, Pays lePays)
         {
             this.nomAssociation = nomAssociation;

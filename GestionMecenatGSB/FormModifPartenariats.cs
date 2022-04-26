@@ -26,6 +26,8 @@ namespace GestionMecenatGSB
             dtgPartenariats.DataSource = PartenariatManager.GetInstance().GetLesPartenariats();
             dtgPartenariats.Columns[3].Visible = false;
             dtgPartenariats.Columns[4].Visible = false;
+            dtgPartenariats.Columns[7].Visible = false;
+            dtgPartenariats.Columns[8].Visible = false;
 
             cbxActionMenee.DisplayMember = "libelle";
             cbxActionMenee.ValueMember = "id";
@@ -45,6 +47,9 @@ namespace GestionMecenatGSB
 
             txtBudgetPrev.Text = dtgPartenariats.Rows[e.RowIndex].Cells[1].Value.ToString();
             txtCoutReel.Text = dtgPartenariats.Rows[e.RowIndex].Cells[2].Value.ToString();
+
+            cbxActionMenee.SelectedValue = (int)dtgPartenariats.Rows[e.RowIndex].Cells[7].Value;
+            cbxAssoLiee.SelectedValue = (int)dtgPartenariats.Rows[e.RowIndex].Cells[8].Value;
         }
 
         private void btnModifier_Click(object sender, EventArgs e)

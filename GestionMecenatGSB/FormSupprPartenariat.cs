@@ -14,6 +14,8 @@ namespace GestionMecenatGSB
 {
     public partial class FormSupprPartenariat : Form
     {
+        int idActionMenee = 0;
+        int idAssoChoisie = 0;
         public FormSupprPartenariat()
         {
             InitializeComponent();
@@ -31,7 +33,9 @@ namespace GestionMecenatGSB
         {
             dtgPartenariats.DataSource = PartenariatManager.GetInstance().GetLesPartenariats();
             dtgPartenariats.Columns[3].Visible = false;
-            dtgPartenariats.Columns[4].Visible = false;
+            dtgPartenariats.Columns[3].Visible = false;
+            dtgPartenariats.Columns[7].Visible = false;
+            dtgPartenariats.Columns[8].Visible = false;
 
             dtgPartenariatChoisi.Rows[0].Cells[0].Value = "";
             dtgPartenariatChoisi.Rows[0].Cells[1].Value = "";
@@ -51,8 +55,8 @@ namespace GestionMecenatGSB
                     (int)dtgPartenariatChoisi.Rows[0].Cells[0].Value,
                     (decimal)dtgPartenariatChoisi.Rows[0].Cells[1].Value,
                     (decimal)dtgPartenariatChoisi.Rows[0].Cells[2].Value,
-                    new ActionMenee(dtgPartenariatChoisi.Rows[0].Cells[3].Value.ToString()),
-                    new Association(dtgPartenariatChoisi.Rows[0].Cells[4].Value.ToString())
+                    new ActionMenee(idActionMenee),
+                    new Association(idAssoChoisie)
                     );
 
                     if(nb == -1)
@@ -84,6 +88,9 @@ namespace GestionMecenatGSB
             dtgPartenariatChoisi.Rows[0].Cells[2].Value = dtgPartenariats.Rows[e.RowIndex].Cells[2].Value;
             dtgPartenariatChoisi.Rows[0].Cells[3].Value = dtgPartenariats.Rows[e.RowIndex].Cells[5].Value;
             dtgPartenariatChoisi.Rows[0].Cells[4].Value = dtgPartenariats.Rows[e.RowIndex].Cells[6].Value;
+
+            idActionMenee = (int)dtgPartenariats.Rows[e.RowIndex].Cells[7].Value;
+            idAssoChoisie = (int)dtgPartenariats.Rows[e.RowIndex].Cells[8].Value;
         }
     }
 
