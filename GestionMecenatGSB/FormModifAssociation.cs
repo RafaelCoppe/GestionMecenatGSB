@@ -47,7 +47,7 @@ namespace GestionMecenatGSB
             Pays lePays = new Pays((int)cbxModifPays.SelectedValue, cbxModifPays.SelectedText);
             try
             {
-                int idAssoc = (int)cbxModifAssoc.SelectedValue;
+                int idAssoc = (int)cbxModifAssoc.SelectedIndex;
                 AssociationManager.GetInstance().ModifAssociation(txtBoxModifNom.Text, txtModifResp.Text, lePays.Id, laMission.Id);
                 MessageBox.Show("L'association a bien été modifié");
             }

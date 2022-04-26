@@ -38,7 +38,7 @@ namespace GestionMecenatBLL
             return AssociationDAO.GetInstance().AjoutAssociation(uneAssociation);
         }
 
-        public int ModifAssociation(string nomAssociation, string nomResponsable, int idMission, int idPays)
+        public int ModifAssociation( string nomAssociation, string nomResponsable, int idMission, int idPays)
         {
             Pays unPays = new Pays(idPays);
             Mission uneMission = new Mission(idMission);
