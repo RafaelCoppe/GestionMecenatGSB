@@ -32,8 +32,6 @@ namespace GestionMecenatGSB
             dtgPartenariats.DataSource = PartenariatManager.GetInstance().GetLesPartenariats();
             dtgPartenariats.Columns[3].Visible = false;
             dtgPartenariats.Columns[4].Visible = false;
-            dtgPartenariats.Columns[7].Visible = false;
-            dtgPartenariats.Columns[8].Visible = false;
 
             dtgPartenariatChoisi.Rows[0].Cells[0].Value = "";
             dtgPartenariatChoisi.Rows[0].Cells[1].Value = "";
@@ -45,15 +43,38 @@ namespace GestionMecenatGSB
 
         private void btnSuppr_Click(object sender, EventArgs e)
         {
-            int nb = PartenariatManager.GetInstance().SupprPartenariat(
-                (int)dtgPartenariatChoisi.Rows[0].Cells[0].Value,
-                (decimal)dtgPartenariatChoisi.Rows[0].Cells[1].Value,
-                (decimal)dtgPartenariatChoisi.Rows[0].Cells[2].Value,
-                new ActionMenee(dtgPartenariatChoisi.Rows[0].Cells[3].Value.ToString()),
-                new Association(dtgPartenariatChoisi.Rows[0].Cells[4].Value.ToString())
-                );
+            DialogResult dialogResult = MessageBox.Show("Etes-vous sur de vouloir supprimer ce partenariat ?", "Validation", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                try { 
+                    int nb = PartenariatManager.GetInstance().SupprPartenariat(
+                    (int)dtgPartenariatChoisi.Rows[0].Cells[0].Value,
+                    (decimal)dtgPartenariatChoisi.Rows[0].Cells[1].Value,
+                    (decimal)dtgPartenariatChoisi.Rows[0].Cells[2].Value,
+                    new ActionMenee(dtgPartenariatChoisi.Rows[0].Cells[3].Value.ToString()),
+                    new Association(dtgPartenariatChoisi.Rows[0].Cells[4].Value.ToString())
+                    );
 
-            majCbx();
+                    if(nb == -1)
+                    {
+                        MessageBox.Show("Suppression réussie", "Réussite", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("La suppression n'a pas fonctionnée", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch(Exception uneException)
+                {
+                    MessageBox.Show("Problème au niveau de la suppression : " + uneException.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+                majCbx();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                majCbx();
+            }
         }
 
         private void dtgPartenariats_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
