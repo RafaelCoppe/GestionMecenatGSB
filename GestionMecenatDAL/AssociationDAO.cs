@@ -118,6 +118,9 @@ namespace GestionMecenatDAL
 
             commande.CommandText = "modifAssociation";
 
+            commande.Parameters.Add("Id", System.Data.SqlDbType.Int);
+            commande.Parameters["Id"].Value = uneAssociation.Id;
+
             commande.Parameters.Add("parNomAssoc", System.Data.SqlDbType.VarChar);
             commande.Parameters["parNomAssoc"].Value = uneAssociation.NomAssociation;
 
