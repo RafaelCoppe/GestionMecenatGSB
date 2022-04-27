@@ -70,5 +70,11 @@ namespace GestionMecenatGSB
             FormConsultPartenariatParAction lePartenariatConsultParAction = new FormConsultPartenariatParAction();
             lePartenariatConsultParAction.Show();
         }
+
+        private void limitesDeMécénatToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FormModifLimiteMecenat laLimiteMecenatModif = new FormModifLimiteMecenat();
+            laLimiteMecenatModif.Show();
+        }
     }
 }

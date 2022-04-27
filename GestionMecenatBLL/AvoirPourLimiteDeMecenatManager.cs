@@ -35,9 +35,17 @@ namespace GestionMecenatBLL
             return AvoirPourLimiteDeMecenatDAO.GetInstance().AjoutLimiteDeMecenat(uneLimiteMecenat);
         }
 
+        // Appel de la méthode GetLimiteDeMecenat de la DAO
         public List<AvoirPourLimiteDeMecenat> GetLimiteDeMecenat()
         {
             return AvoirPourLimiteDeMecenatDAO.GetInstance().GetLimiteDeMecenat();
+        }
+        //Appel de la méthode ModifLimiteMecenat de la DAO
+        public int ModifLimiteMecenat(Decimal plafondMecenat, Pays newPays, Annee newAnnee, Pays ancienPays, Annee ancienneAnnee)
+        {
+            AvoirPourLimiteDeMecenat uneLimiteMecenatModifie = new AvoirPourLimiteDeMecenat(plafondMecenat, newPays, newAnnee);
+            AvoirPourLimiteDeMecenat uneLimiteMecenatAncien = new AvoirPourLimiteDeMecenat(ancienPays, ancienneAnnee);
+            return AvoirPourLimiteDeMecenatDAO.GetInstance().ModifLimiteMecenat(uneLimiteMecenatModifie, uneLimiteMecenatAncien);
         }
     }
 }

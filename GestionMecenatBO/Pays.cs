@@ -6,6 +6,15 @@ using System.Threading.Tasks;
 
 namespace GestionMecenatBO
 {
+    /// <summary>
+    /// Classe Pays qui réfère à la table pays de la base de données Mecenat
+    /// int id : l'id du partenariat
+    /// string libelle : le libelle de l'action
+    /// 
+    /// Deux constructeurs : 
+    /// Un constructeur avec avec l'id et le libelle : utilisé pour récuperer les informations dans la base de données
+    /// un constructeur avec seulement le libelle : utilisé pour insérer les informations dans la base de données
+    /// </summary>
     public class Pays
     {
         // Attributs
@@ -29,6 +38,11 @@ namespace GestionMecenatBO
         public Pays(string libelle)
         {
             this.libelle = libelle;
+        }
+
+        public Pays(int id)
+        {
+            this.id = id;
         }
     }
 }
