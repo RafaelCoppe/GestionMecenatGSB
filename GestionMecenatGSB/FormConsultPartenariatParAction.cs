@@ -40,6 +40,7 @@ namespace GestionMecenatGSB
             {
                 lblNbElements.Text = "Nombre d'élements : " + dtgPartenariats.RowCount;
             }
+            dtgPartenariats.Columns[0].Visible = false;
             dtgPartenariats.Columns[3].Visible = false;
             dtgPartenariats.Columns[4].Visible = false;
             dtgPartenariats.Columns[5].Visible = false;
