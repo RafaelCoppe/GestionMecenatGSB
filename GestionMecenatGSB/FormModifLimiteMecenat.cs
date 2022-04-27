@@ -45,8 +45,7 @@ namespace GestionMecenatGSB
             cbxAnnee.SelectedItem = null;
         }
 
-
-        private void dtgConsultLimiteMecenat_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dtgConsultLimiteMecenat_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             txtSommeMax.Text = dtgConsultLimiteMecenat.Rows[e.RowIndex].Cells[0].Value.ToString();
             limiteMecenatChoisi = true;
@@ -115,13 +114,13 @@ namespace GestionMecenatGSB
                 majCbx();
             }
         }
-        private void btnAnnuler_Click(object sender, EventArgs e)
+
+        private void btnAnnuler_Click_1(object sender, EventArgs e)
         {
             txtSommeMax.Text = "";
 
             cbxAnnee.SelectedIndex = -1;
             cbxPays.SelectedIndex = -1;
         }
-
     }
 }

@@ -49,6 +49,7 @@ namespace GestionMecenatGSB
             this.btnModifier.TabIndex = 32;
             this.btnModifier.Text = "Modifier la limite de Mecenat";
             this.btnModifier.UseVisualStyleBackColor = true;
+            this.btnModifier.Click += new System.EventHandler(this.btnModifier_Click);
             // 
             // btnAnnuler
             // 
@@ -58,6 +59,7 @@ namespace GestionMecenatGSB
             this.btnAnnuler.TabIndex = 31;
             this.btnAnnuler.Text = "Annuler";
             this.btnAnnuler.UseVisualStyleBackColor = true;
+            this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click_1);
             // 
             // txtSommeMax
             // 
@@ -116,6 +118,7 @@ namespace GestionMecenatGSB
             this.dtgConsultLimiteMecenat.Name = "dtgConsultLimiteMecenat";
             this.dtgConsultLimiteMecenat.Size = new System.Drawing.Size(557, 328);
             this.dtgConsultLimiteMecenat.TabIndex = 24;
+            this.dtgConsultLimiteMecenat.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgConsultLimiteMecenat_CellContentDoubleClick);
             // 
             // FormModifLimiteMecenat
             // 

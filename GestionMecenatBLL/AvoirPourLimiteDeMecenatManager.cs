@@ -1,5 +1,4 @@
-﻿
-using GestionMecenatBO;
+﻿using GestionMecenatBO;
 using GestionMecenatDAL;
 using System;
 using System.Collections.Generic;
@@ -50,5 +49,3 @@ namespace GestionMecenatBLL
         }
     }
 }
-
-
