@@ -30,6 +30,11 @@ namespace GestionMecenatBLL
             return PartenariatDAO.GetInstance().GetPartenariats();
         }
 
+        public List<Partenariat> GetLesPartenariatsParAction(int idActionMenee)
+        {
+            return PartenariatDAO.GetInstance().GetLesPartenariatsParAction(new ActionMenee(idActionMenee));
+        }
+
         //Appel de la méthode AjoutPartenariat de la DAO
         public int AjoutPartenariat(decimal budgetPrevisionnel, decimal coutPartenariat, ActionMenee uneActionMenee, Association uneAssociation)
         {
@@ -41,6 +46,12 @@ namespace GestionMecenatBLL
         {
             Partenariat lePartenariatModifie = new Partenariat(idPartenariatChoisi, budgetPrev, coutReel, newActionMenee, newAssoLiee);
             return PartenariatDAO.GetInstance().ModifPartenariat(lePartenariatModifie);
+        }
+
+        public int SupprPartenariat(int idPartenariatChoisi, Decimal budgetPrev, Decimal coutReel, ActionMenee newActionMenee, Association newAssoLiee)
+        {
+            Partenariat lePartenariatModifie = new Partenariat(idPartenariatChoisi, budgetPrev, coutReel, newActionMenee, newAssoLiee);
+            return PartenariatDAO.GetInstance().SupprPartenariat(lePartenariatModifie);
         }
     }
 }

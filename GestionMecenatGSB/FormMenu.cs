@@ -23,11 +23,6 @@ namespace GestionMecenatGSB
             lePartenariatAjout.Show();
         }
 
-        private void partenariatsToolStripMenuItem2_Click(object sender, EventArgs e)//Consultation des partenariats
-        {
-            FormConsultPartenariat lePartenariatConsult = new FormConsultPartenariat();
-            lePartenariatConsult.Show();
-        }
 
         private void associationsToolStripMenuItem_Click(object sender, EventArgs e)//Ajout d'une association
         {
@@ -41,6 +36,11 @@ namespace GestionMecenatGSB
             laLimiteMecenatAjout.Show();
         }
 
+        private void associationsToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            FormConsultAssoc leFormConsultAssoc = new FormConsultAssoc();
+            leFormConsultAssoc.Show();
+        }
         private void limiteDeMécénatToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormConsultLimiteMecenat laLimiteMecenatConsult = new FormConsultLimiteMecenat();
@@ -57,6 +57,22 @@ namespace GestionMecenatGSB
         {
             FormModifLimiteMecenat laLimiteMecenatModif = new FormModifLimiteMecenat();
             laLimiteMecenatModif.Show();
+        private void partenariatsToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FormSupprPartenariat lePartenariatSuppr = new FormSupprPartenariat();
+            lePartenariatSuppr.Show();
+        }
+
+        private void tousLesPartenariatsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormConsultPartenariat lePartenariatConsult = new FormConsultPartenariat();
+            lePartenariatConsult.Show();
+        }
+
+        private void selonLactionMenéeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormConsultPartenariatParAction lePartenariatConsultParAction = new FormConsultPartenariatParAction();
+            lePartenariatConsultParAction.Show();
         }
     }
 }
