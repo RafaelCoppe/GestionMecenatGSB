@@ -82,6 +82,12 @@
     <Compile Include="FormConsultLimiteMecenat.Designer.cs">
       <DependentUpon>FormConsultLimiteMecenat.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormConsultPartenariatParAction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsultPartenariatParAction.Designer.cs">
+      <DependentUpon>FormConsultPartenariatParAction.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormConsultLimiteMecenat.resx">
       <DependentUpon>FormConsultLimiteMecenat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultPartenariatParAction.resx">
+      <DependentUpon>FormConsultPartenariatParAction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
