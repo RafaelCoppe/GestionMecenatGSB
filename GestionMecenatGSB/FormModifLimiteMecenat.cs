@@ -93,8 +93,10 @@ namespace GestionMecenatGSB
                         decimal plafondMecenat = decimal.Parse(txtSommeMax.Text);
                         Pays newPays = new Pays((int)cbxPays.SelectedValue, cbxPays.SelectedText);
                         Annee newAnnee = new Annee((int)cbxAnnee.SelectedValue);
+                        Pays ancienPays = new Pays(idPays);
+                        Annee ancienneAnnee = new Annee(idAnnee);
 
-                        int nb = AvoirPourLimiteDeMecenatManager.GetInstance().ModifLimiteMecenat(plafondMecenat, newPays, newAnnee);
+                        int nb = AvoirPourLimiteDeMecenatManager.GetInstance().ModifLimiteMecenat(plafondMecenat, newPays, newAnnee, ancienPays, ancienneAnnee);
                         if (nb == -1)
                         {
                             MessageBox.Show("Modification réussie", "Réussite", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -120,5 +122,6 @@ namespace GestionMecenatGSB
             cbxAnnee.SelectedIndex = -1;
             cbxPays.SelectedIndex = -1;
         }
+
     }
 }

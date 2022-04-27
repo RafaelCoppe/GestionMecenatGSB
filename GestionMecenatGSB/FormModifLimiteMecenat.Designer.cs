@@ -134,7 +134,7 @@
             this.Controls.Add(this.lblAnnee);
             this.Controls.Add(this.dtgConsultLimiteMecenat);
             this.Name = "FormModifLimiteMecenat";
-            this.Text = "FormModifLimiteMecenat";
+            this.Text = "Modification d\'une limite de mecenat";
             ((System.ComponentModel.ISupportInitialize)(this.dtgConsultLimiteMecenat)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
