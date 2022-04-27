@@ -20,6 +20,11 @@ namespace GestionMecenatBO
         public Mission LaMission { get => laMission; set => laMission = value; }
         public Pays LePays { get => lePays; set => lePays = value; }
 
+        //POUR RENDRE VISIBLE LA MISSION ET LE PAYS
+        public string libMission { get => laMission.Libelle; }
+        public string libPays { get => lePays.Libelle; }
+      
+
         public Association(int id, string nomAssociation, string nomResponsable, Mission laMission, Pays lePays)
         {
             this.id = id;

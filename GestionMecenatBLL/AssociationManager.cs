@@ -37,5 +37,18 @@ namespace GestionMecenatBLL
             Association uneAssociation = new Association(nomAssociation, nomResponsable, laMission, lePays);
             return AssociationDAO.GetInstance().AjoutAssociation(uneAssociation);
         }
+
+        public int ModifAssociation( int idAssoc, string nomAssociation, string nomResponsable, int idMission, int idPays)
+        {
+            Pays unPays = new Pays(idPays);
+            Mission uneMission = new Mission(idMission);
+            Association uneAssociation = new Association(idAssoc, nomAssociation, nomResponsable, uneMission, unPays);
+            return AssociationDAO.GetInstance().ModifAssociation(uneAssociation);
+        }
+
+        public Association RecupererAssociation(int id)
+        {
+            return AssociationDAO.GetInstance().RecupererAssociation(id);
+        }
     }
 }
