@@ -73,8 +73,8 @@ namespace GestionMecenatGSB
 
         private void limitesDeMécénatToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            FormModifLimiteMecenat laModifLimiteMecenat = new FormModifLimiteMecenat();
-            laModifLimiteMecenat.Show();
+            FormModifLimiteMecenat laLimiteMecenatModif = new FormModifLimiteMecenat();
+            laLimiteMecenatModif.Show();
         }
     }
 }

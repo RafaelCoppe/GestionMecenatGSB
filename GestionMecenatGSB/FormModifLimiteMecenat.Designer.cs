@@ -59,7 +59,6 @@ namespace GestionMecenatGSB
             this.btnAnnuler.TabIndex = 31;
             this.btnAnnuler.Text = "Annuler";
             this.btnAnnuler.UseVisualStyleBackColor = true;
-            this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click_1);
             // 
             // txtSommeMax
             // 
