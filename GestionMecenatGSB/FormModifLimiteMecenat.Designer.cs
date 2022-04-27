@@ -69,7 +69,7 @@ namespace GestionMecenatGSB
             // cbxAnnee
             // 
             this.cbxAnnee.FormattingEnabled = true;
-            this.cbxAnnee.Location = new System.Drawing.Point(611, 184);
+            this.cbxAnnee.Location = new System.Drawing.Point(600, 180);
             this.cbxAnnee.Name = "cbxAnnee";
             this.cbxAnnee.Size = new System.Drawing.Size(160, 21);
             this.cbxAnnee.TabIndex = 29;
@@ -77,7 +77,7 @@ namespace GestionMecenatGSB
             // cbxPays
             // 
             this.cbxPays.FormattingEnabled = true;
-            this.cbxPays.Location = new System.Drawing.Point(611, 93);
+            this.cbxPays.Location = new System.Drawing.Point(600, 95);
             this.cbxPays.Name = "cbxPays";
             this.cbxPays.Size = new System.Drawing.Size(160, 21);
             this.cbxPays.TabIndex = 27;

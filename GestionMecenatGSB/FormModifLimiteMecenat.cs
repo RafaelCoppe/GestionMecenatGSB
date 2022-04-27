@@ -46,15 +46,5 @@ namespace GestionMecenatGSB
             cbxAnnee.SelectedItem = null;
         }
 
-
-        private void dtgConsultLimiteMecenat_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-        private void btnAnnuler_Click(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }
