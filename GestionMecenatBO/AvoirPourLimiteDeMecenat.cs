@@ -19,6 +19,8 @@ namespace GestionMecenatBO
         public Annee UneAnnee { get => uneAnnee; set => uneAnnee = value; }
         public int libAnnee { get => UneAnnee.NumAnnee; }
         public string libPays { get => lePays.Libelle;  }
+        public int idAnnee { get => UneAnnee.NumAnnee; }
+        public int idPays { get => lePays.Id; }
         // Constructeur 
         public AvoirPourLimiteDeMecenat(decimal plafondMecenat, Pays lePays, Annee uneAnnee)
         {
