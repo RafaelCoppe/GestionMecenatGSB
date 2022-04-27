@@ -43,13 +43,12 @@ namespace GestionMecenatGSB
 
         private void btnModifAssoc_Click(object sender, EventArgs e)
         {
-            Mission laMission = new Mission((int)cbxModifMission.SelectedValue, cbxModifMission.SelectedText);
-            Pays lePays = new Pays((int)cbxModifPays.SelectedValue, cbxModifPays.SelectedText);
+            
             try
             {
                 int idAssoc = (int)cbxModifAssoc.SelectedValue;
                 
-                AssociationManager.GetInstance().ModifAssociation(txtBoxModifNom.Text, txtModifResp.Text, lePays.Id, laMission.Id);
+                AssociationManager.GetInstance().ModifAssociation(idAssoc, txtBoxModifNom.Text, txtModifResp.Text, (int)cbxModifPays.SelectedValue, (int)cbxModifMission.SelectedValue);
                 MessageBox.Show("L'association a bien été modifié");
             }
             catch (Exception exception)
