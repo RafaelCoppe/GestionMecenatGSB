@@ -23,10 +23,6 @@ namespace GestionMecenatGSB
             lePartenariatAjout.Show();
         }
 
-        private void partenariatsToolStripMenuItem2_Click(object sender, EventArgs e)//Consultation des partenariats
-        {
-            
-        }
 
         private void associationsToolStripMenuItem_Click(object sender, EventArgs e)//Ajout d'une association
         {
@@ -45,11 +41,40 @@ namespace GestionMecenatGSB
             FormConsultAssoc leFormConsultAssoc = new FormConsultAssoc();
             leFormConsultAssoc.Show();
         }
-
-        private void associationsToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void limiteDeMécénatToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormModifAssociation leFormModifAssoc = new FormModifAssociation();
-            leFormModifAssoc.Show();
+            FormConsultLimiteMecenat laLimiteMecenatConsult = new FormConsultLimiteMecenat();
+            laLimiteMecenatConsult.Show();
+        }
+
+        private void iToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormModifPartenariats lePartenariatModif = new FormModifPartenariats();
+            lePartenariatModif.Show();
+        }
+
+        private void partenariatsToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FormSupprPartenariat lePartenariatSuppr = new FormSupprPartenariat();
+            lePartenariatSuppr.Show();
+        }
+
+        private void tousLesPartenariatsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormConsultPartenariat lePartenariatConsult = new FormConsultPartenariat();
+            lePartenariatConsult.Show();
+        }
+
+        private void selonLactionMenéeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormConsultPartenariatParAction lePartenariatConsultParAction = new FormConsultPartenariatParAction();
+            lePartenariatConsultParAction.Show();
+        }
+
+        private void limitesDeMécénatToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FormModifLimiteMecenat laLimiteMecenatModif = new FormModifLimiteMecenat();
+            laLimiteMecenatModif.Show();
         }
     }
 }

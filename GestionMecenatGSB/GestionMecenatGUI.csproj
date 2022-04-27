@@ -70,17 +70,47 @@
     <Compile Include="FormConsultAssoc.Designer.cs">
       <DependentUpon>FormConsultAssoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormConsultPartenariat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsultPartenariat.Designer.cs">
+      <DependentUpon>FormConsultPartenariat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConsultLimiteMecenat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsultLimiteMecenat.Designer.cs">
+      <DependentUpon>FormConsultLimiteMecenat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConsultPartenariatParAction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsultPartenariatParAction.Designer.cs">
+      <DependentUpon>FormConsultPartenariatParAction.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMenu.Designer.cs">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormModifAssociation.cs">
+    <Compile Include="FormModifLimiteMecenat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormModifAssociation.Designer.cs">
-      <DependentUpon>FormModifAssociation.cs</DependentUpon>
+    <Compile Include="FormModifLimiteMecenat.Designer.cs">
+      <DependentUpon>FormModifLimiteMecenat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormModifPartenariats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModifPartenariats.Designer.cs">
+      <DependentUpon>FormModifPartenariats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSupprPartenariat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSupprPartenariat.Designer.cs">
+      <DependentUpon>FormSupprPartenariat.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -96,11 +126,26 @@
     <EmbeddedResource Include="FormConsultAssoc.resx">
       <DependentUpon>FormConsultAssoc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultPartenariat.resx">
+      <DependentUpon>FormConsultPartenariat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultLimiteMecenat.resx">
+      <DependentUpon>FormConsultLimiteMecenat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultPartenariatParAction.resx">
+      <DependentUpon>FormConsultPartenariatParAction.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormModifAssociation.resx">
-      <DependentUpon>FormModifAssociation.cs</DependentUpon>
+    <EmbeddedResource Include="FormModifLimiteMecenat.resx">
+      <DependentUpon>FormModifLimiteMecenat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModifPartenariats.resx">
+      <DependentUpon>FormModifPartenariats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSupprPartenariat.resx">
+      <DependentUpon>FormSupprPartenariat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

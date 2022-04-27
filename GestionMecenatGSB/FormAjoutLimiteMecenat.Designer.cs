@@ -41,7 +41,7 @@ namespace GestionMecenatGSB
             // txtSommeMaximum
             // 
             this.txtSommeMaximum.Location = new System.Drawing.Point(335, 222);
-            this.txtSommeMaximum.Mask = "9999999";
+            this.txtSommeMaximum.Mask = "9999.99";
             this.txtSommeMaximum.Name = "txtSommeMaximum";
             this.txtSommeMaximum.Size = new System.Drawing.Size(112, 20);
             this.txtSommeMaximum.TabIndex = 15;
@@ -113,7 +113,7 @@ namespace GestionMecenatGSB
             this.Controls.Add(this.lblPays);
             this.Controls.Add(this.lblAnnee);
             this.Name = "FormAjoutLimiteMecenat";
-            this.Text = "FormAjoutLimiteMecenat";
+            this.Text = "Création des limites de mécénat";
             this.ResumeLayout(false);
             this.PerformLayout();
 
