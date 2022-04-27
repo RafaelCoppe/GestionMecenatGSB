@@ -120,26 +120,26 @@ namespace GestionMecenatGSB
             // associationsToolStripMenuItem1
             // 
             this.associationsToolStripMenuItem1.Name = "associationsToolStripMenuItem1";
-            this.associationsToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.associationsToolStripMenuItem1.Size = new System.Drawing.Size(177, 22);
             this.associationsToolStripMenuItem1.Text = "Associations";
             // 
             // actionsToolStripMenuItem1
             // 
             this.actionsToolStripMenuItem1.Name = "actionsToolStripMenuItem1";
-            this.actionsToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.actionsToolStripMenuItem1.Size = new System.Drawing.Size(177, 22);
             this.actionsToolStripMenuItem1.Text = "Actions";
             // 
             // iToolStripMenuItem
             // 
             this.iToolStripMenuItem.Name = "iToolStripMenuItem";
-            this.iToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.iToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.iToolStripMenuItem.Text = "Partenariats";
             this.iToolStripMenuItem.Click += new System.EventHandler(this.iToolStripMenuItem_Click);
             // 
             // limitesDeMécénatToolStripMenuItem1
             // 
             this.limitesDeMécénatToolStripMenuItem1.Name = "limitesDeMécénatToolStripMenuItem1";
-            this.limitesDeMécénatToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.limitesDeMécénatToolStripMenuItem1.Size = new System.Drawing.Size(177, 22);
             this.limitesDeMécénatToolStripMenuItem1.Text = "Limites de mécénat";
             this.limitesDeMécénatToolStripMenuItem1.Click += new System.EventHandler(this.limitesDeMécénatToolStripMenuItem1_Click);
             // 
@@ -157,27 +157,28 @@ namespace GestionMecenatGSB
             // associationsToolStripMenuItem2
             // 
             this.associationsToolStripMenuItem2.Name = "associationsToolStripMenuItem2";
-            this.associationsToolStripMenuItem2.Size = new System.Drawing.Size(177, 22);
+            this.associationsToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.associationsToolStripMenuItem2.Text = "Associations";
             // 
             // missionsToolStripMenuItem
             // 
             this.missionsToolStripMenuItem.Name = "missionsToolStripMenuItem";
-            this.missionsToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.missionsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.missionsToolStripMenuItem.Text = "Actions";
             // 
             // partenariatsToolStripMenuItem1
             // 
             this.partenariatsToolStripMenuItem1.Name = "partenariatsToolStripMenuItem1";
-            this.partenariatsToolStripMenuItem1.Size = new System.Drawing.Size(177, 22);
+            this.partenariatsToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.partenariatsToolStripMenuItem1.Text = "Partenariats";
             this.partenariatsToolStripMenuItem1.Click += new System.EventHandler(this.partenariatsToolStripMenuItem1_Click);
             // 
             // limitesDeMécénatToolStripMenuItem2
             // 
             this.limitesDeMécénatToolStripMenuItem2.Name = "limitesDeMécénatToolStripMenuItem2";
-            this.limitesDeMécénatToolStripMenuItem2.Size = new System.Drawing.Size(177, 22);
+            this.limitesDeMécénatToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.limitesDeMécénatToolStripMenuItem2.Text = "Limites de mécénat";
+            this.limitesDeMécénatToolStripMenuItem2.Click += new System.EventHandler(this.limitesDeMécénatToolStripMenuItem2_Click);
             // 
             // menuDesConsultationsToolStripMenuItem
             // 
