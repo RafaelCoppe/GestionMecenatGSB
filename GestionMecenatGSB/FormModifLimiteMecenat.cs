@@ -49,23 +49,11 @@ namespace GestionMecenatGSB
 
         private void dtgConsultLimiteMecenat_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtSommeMax.Text = dtgConsultLimiteMecenat.Rows[e.RowIndex].Cells[0].Value.ToString();
-            limiteMecenatChoisi = true;
-
-            idPays = (int)dtgConsultLimiteMecenat.Rows[e.RowIndex].Cells[5].Value;
-            idAnnee = (int)dtgConsultLimiteMecenat.Rows[e.RowIndex].Cells[3].Value;
-        }
-
-        private void btnModifier_Click(object sender, EventArgs e)
-        {
 
         }
         private void btnAnnuler_Click(object sender, EventArgs e)
         {
-            txtSommeMax.Text = "";
 
-            cbxAnnee.SelectedIndex = -1;
-            cbxPays.SelectedIndex = -1;
         }
 
     }
