@@ -30,7 +30,6 @@ namespace GestionMecenatGSB
         private void InitializeComponent()
         {
             this.dtgConsultLimiteMecenat = new System.Windows.Forms.DataGridView();
-            this.txtSommeMax = new System.Windows.Forms.MaskedTextBox();
             this.cbxAnnee = new System.Windows.Forms.ComboBox();
             this.cbxPays = new System.Windows.Forms.ComboBox();
             this.btnModifier = new System.Windows.Forms.Button();
@@ -38,6 +37,7 @@ namespace GestionMecenatGSB
             this.lblPays = new System.Windows.Forms.Label();
             this.lblAnnee = new System.Windows.Forms.Label();
             this.lblPlafondMecenat = new System.Windows.Forms.Label();
+            this.txtSommeMax = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgConsultLimiteMecenat)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,14 +48,6 @@ namespace GestionMecenatGSB
             this.dtgConsultLimiteMecenat.Name = "dtgConsultLimiteMecenat";
             this.dtgConsultLimiteMecenat.Size = new System.Drawing.Size(554, 333);
             this.dtgConsultLimiteMecenat.TabIndex = 12;
-            // 
-            // txtSommeMax
-            // 
-            this.txtSommeMax.Location = new System.Drawing.Point(586, 73);
-            this.txtSommeMax.Mask = "9999.99";
-            this.txtSommeMax.Name = "txtSommeMax";
-            this.txtSommeMax.Size = new System.Drawing.Size(202, 20);
-            this.txtSommeMax.TabIndex = 24;
             // 
             // cbxAnnee
             // 
@@ -118,11 +110,19 @@ namespace GestionMecenatGSB
             this.lblPlafondMecenat.TabIndex = 31;
             this.lblPlafondMecenat.Text = "Somme maximum :";
             // 
+            // txtSommeMax
+            // 
+            this.txtSommeMax.Location = new System.Drawing.Point(586, 81);
+            this.txtSommeMax.Name = "txtSommeMax";
+            this.txtSommeMax.Size = new System.Drawing.Size(171, 20);
+            this.txtSommeMax.TabIndex = 32;
+            // 
             // FormModifLimiteMecenat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtSommeMax);
             this.Controls.Add(this.lblPlafondMecenat);
             this.Controls.Add(this.lblAnnee);
             this.Controls.Add(this.lblPays);
@@ -130,7 +130,6 @@ namespace GestionMecenatGSB
             this.Controls.Add(this.btnModifier);
             this.Controls.Add(this.cbxPays);
             this.Controls.Add(this.cbxAnnee);
-            this.Controls.Add(this.txtSommeMax);
             this.Controls.Add(this.dtgConsultLimiteMecenat);
             this.Name = "FormModifLimiteMecenat";
             this.Text = "FormModifLimiteMecenat";
@@ -143,7 +142,6 @@ namespace GestionMecenatGSB
         #endregion
 
         private System.Windows.Forms.DataGridView dtgConsultLimiteMecenat;
-        private System.Windows.Forms.MaskedTextBox txtSommeMax;
         private System.Windows.Forms.ComboBox cbxAnnee;
         private System.Windows.Forms.ComboBox cbxPays;
         private System.Windows.Forms.Button btnModifier;
@@ -151,5 +149,6 @@ namespace GestionMecenatGSB
         private System.Windows.Forms.Label lblPays;
         private System.Windows.Forms.Label lblAnnee;
         private System.Windows.Forms.Label lblPlafondMecenat;
+        private System.Windows.Forms.TextBox txtSommeMax;
     }
 }
