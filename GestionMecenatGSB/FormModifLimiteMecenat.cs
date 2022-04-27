@@ -115,7 +115,7 @@ namespace GestionMecenatGSB
             }
         }
 
-        private void btnAnnuler_Click_1(object sender, EventArgs e)
+        private void btnAnnuler_Click(object sender, EventArgs e)
         {
             txtSommeMax.Text = "";
 
