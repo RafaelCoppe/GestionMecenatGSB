@@ -106,6 +106,12 @@
     <Compile Include="FormModifPartenariats.Designer.cs">
       <DependentUpon>FormModifPartenariats.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormSupprLimiteMecenat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSupprLimiteMecenat.Designer.cs">
+      <DependentUpon>FormSupprLimiteMecenat.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSupprPartenariat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormModifPartenariats.resx">
       <DependentUpon>FormModifPartenariats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSupprLimiteMecenat.resx">
+      <DependentUpon>FormSupprLimiteMecenat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSupprPartenariat.resx">
       <DependentUpon>FormSupprPartenariat.cs</DependentUpon>

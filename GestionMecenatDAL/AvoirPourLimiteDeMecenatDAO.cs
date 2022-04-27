@@ -129,5 +129,33 @@ namespace GestionMecenatDAL
             // on retourne le nombre d'enregistrements ajoutés
             return nbEnregModif;
         }
+
+         public int SupprLimiteMecenat(AvoirPourLimiteDeMecenat uneLimiteMecenatModifie)
+        {
+            int nbEnregModif;
+
+            // on crée l'objet qui va contenir le nom de la procédure stockée utilisée
+
+            SqlCommand maCommand = Commande.GetObjCommande();
+
+            //Création des paramètres
+            maCommand.Parameters.Add("idAnneeChoisi", System.Data.SqlDbType.Int);
+            maCommand.Parameters.Add("idPaysChoisi", System.Data.SqlDbType.Int);
+
+            maCommand.Parameters["idAnneeChoisi"].Value = uneLimiteMecenatModifie.idAnnee;
+            maCommand.Parameters["idPaysChoisi"].Value = uneLimiteMecenatModifie.idPays;
+
+            //Stocker le nom de la procédure stockée dans la commande
+            maCommand.CommandText = "SupprLimiteMecenat";
+
+            // on exécute la requête
+            nbEnregModif = maCommand.ExecuteNonQuery();
+
+            //On ferme la connexion
+            maCommand.Connection.Close();
+
+            // on retourne le nombre d'enregistrements ajoutés
+            return nbEnregModif;
+        }
     }
 }
