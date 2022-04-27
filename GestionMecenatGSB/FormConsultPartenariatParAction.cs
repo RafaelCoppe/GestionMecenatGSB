@@ -34,7 +34,11 @@ namespace GestionMecenatGSB
             dtgPartenariats.DataSource = PartenariatManager.GetInstance().GetLesPartenariatsParAction((int)cbxActionMenee.SelectedValue);
             if(dtgPartenariats.RowCount == 0)
             {
-                MessageBox.Show("Aucune entrée pour l'action '" + cbxActionMenee.SelectedText + "'", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning); ;
+                lblNbElements.Text = "Aucun élément pour cette action";
+            }
+            else
+            {
+                lblNbElements.Text = "Nombre d'élements : " + dtgPartenariats.RowCount;
             }
             dtgPartenariats.Columns[3].Visible = false;
             dtgPartenariats.Columns[4].Visible = false;

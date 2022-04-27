@@ -31,13 +31,14 @@ namespace GestionMecenatGSB
         {
             this.cbxActionMenee = new System.Windows.Forms.ComboBox();
             this.dtgPartenariats = new System.Windows.Forms.DataGridView();
+            this.lblNbElements = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPartenariats)).BeginInit();
             this.SuspendLayout();
             // 
             // cbxActionMenee
             // 
             this.cbxActionMenee.FormattingEnabled = true;
-            this.cbxActionMenee.Location = new System.Drawing.Point(228, 12);
+            this.cbxActionMenee.Location = new System.Drawing.Point(12, 12);
             this.cbxActionMenee.Name = "cbxActionMenee";
             this.cbxActionMenee.Size = new System.Drawing.Size(297, 21);
             this.cbxActionMenee.TabIndex = 0;
@@ -51,17 +52,28 @@ namespace GestionMecenatGSB
             this.dtgPartenariats.Size = new System.Drawing.Size(776, 380);
             this.dtgPartenariats.TabIndex = 1;
             // 
+            // lblNbElements
+            // 
+            this.lblNbElements.AutoSize = true;
+            this.lblNbElements.Location = new System.Drawing.Point(470, 15);
+            this.lblNbElements.Name = "lblNbElements";
+            this.lblNbElements.Size = new System.Drawing.Size(106, 13);
+            this.lblNbElements.TabIndex = 2;
+            this.lblNbElements.Text = "Nombre d\'éléments : ";
+            // 
             // FormConsultPartenariatParAction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblNbElements);
             this.Controls.Add(this.dtgPartenariats);
             this.Controls.Add(this.cbxActionMenee);
             this.Name = "FormConsultPartenariatParAction";
             this.Text = "FormConsultPartenariatParAction";
             ((System.ComponentModel.ISupportInitialize)(this.dtgPartenariats)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -69,5 +81,6 @@ namespace GestionMecenatGSB
 
         private System.Windows.Forms.ComboBox cbxActionMenee;
         private System.Windows.Forms.DataGridView dtgPartenariats;
+        private System.Windows.Forms.Label lblNbElements;
     }
 }
