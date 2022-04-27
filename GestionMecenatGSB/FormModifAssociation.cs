@@ -32,14 +32,14 @@ namespace GestionMecenatGSB
             cbxModifAssoc.DataSource = AssociationManager.GetInstance().GetAssociations();
         }
 
-        private void cbxModifAssoc_SelectionChangeCommitted(object sender, EventArgs e)
+        /*/private void cbxModifAssoc_SelectionChangeCommitted(object sender, EventArgs e)
         {
             int idAssoc = (int)cbxModifAssoc.SelectedValue;
             Association uneAssociation = AssociationManager.GetInstance().RecupererAssociation(idAssoc);
 
             txtBoxModifNom.Text = uneAssociation.NomAssociation;
             txtModifResp.Text = uneAssociation.NomResponsbale;
-        }
+        }/*/
 
         private void btnModifAssoc_Click(object sender, EventArgs e)
         {
@@ -47,7 +47,8 @@ namespace GestionMecenatGSB
             Pays lePays = new Pays((int)cbxModifPays.SelectedValue, cbxModifPays.SelectedText);
             try
             {
-                int idAssoc = (int)cbxModifAssoc.SelectedIndex;
+                int idAssoc = (int)cbxModifAssoc.SelectedValue;
+                
                 AssociationManager.GetInstance().ModifAssociation(txtBoxModifNom.Text, txtModifResp.Text, lePays.Id, laMission.Id);
                 MessageBox.Show("L'association a bien été modifié");
             }

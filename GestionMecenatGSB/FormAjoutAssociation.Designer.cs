@@ -131,7 +131,7 @@ namespace GestionMecenatGSB
             this.Controls.Add(this.lblNomAssociation);
             this.Controls.Add(this.txtNomAssoc);
             this.Name = "FormAjoutAssociation";
-            this.Text = "FormAjoutAssociation";
+            this.Text = "Ajout d\'une association";
             this.ResumeLayout(false);
             this.PerformLayout();
 

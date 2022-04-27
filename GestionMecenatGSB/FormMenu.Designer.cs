@@ -114,20 +114,20 @@ namespace GestionMecenatGSB
             // associationsToolStripMenuItem1
             // 
             this.associationsToolStripMenuItem1.Name = "associationsToolStripMenuItem1";
-            this.associationsToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.associationsToolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
             this.associationsToolStripMenuItem1.Text = "Associations";
             this.associationsToolStripMenuItem1.Click += new System.EventHandler(this.associationsToolStripMenuItem1_Click);
             // 
             // actionsToolStripMenuItem1
             // 
             this.actionsToolStripMenuItem1.Name = "actionsToolStripMenuItem1";
-            this.actionsToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.actionsToolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
             this.actionsToolStripMenuItem1.Text = "Actions";
             // 
             // iToolStripMenuItem
             // 
             this.iToolStripMenuItem.Name = "iToolStripMenuItem";
-            this.iToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.iToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.iToolStripMenuItem.Text = "Partenariats";
             // 
             // menuDesSuppressionsToolStripMenuItem
@@ -196,7 +196,7 @@ namespace GestionMecenatGSB
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormMenu";
-            this.Text = "Form1";
+            this.Text = "Gestion des Mécénats";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
